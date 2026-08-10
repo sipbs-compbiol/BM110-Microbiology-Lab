@@ -6,7 +6,7 @@ project:
 # These variables define the book contents - adjust them as necessary
 book:
   # [A] BOOK TITLE
-  title: "THE TITLE OF THE BOOK"
+  title: "BM110 Microbiology Laboratory: Statistical Support"
   reader-mode: true
   
   # The cover image and favicon; these may not need to be changed
@@ -17,20 +17,20 @@ book:
   # [B] FOOTER TEXT
   page-footer:
     left: |
-      THIS IS A SHORT PIECE OF FOOTER TEXT NAMING THE BOOK/AUTHORS
+      These pages created by Dr Leighton Pritchard
     right: |
       This book was built with <a href="https://quarto.org/">Quarto</a>.
 
   # Sets the URL for the repository
   # [C] GITHUB REPOSITORY URL
-  repo-url: https://github.com/sipbs-compbiol/REPOSITORY
+  repo-url: https://github.com/sipbs-compbiol/BM110-Microbiology-Lab
   repo-branch: main
   repo-actions: [edit, issue]
 
   # Sets author information and publication/presentation date
   # [D] AUTHOR INFORMATION AND PUBLICATION/PRESENTATION DATE
-  author: "AUTHOR NAME"
-  date: "DD/MM/YY"
+  author: "Leighton Pritchard"
+  date: "10/08/26"
 
   # Define chapters and sections here
   # [E] CHAPTERS AND SECTIONS

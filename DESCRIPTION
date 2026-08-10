@@ -1,13 +1,12 @@
-Package: PACKAGE_NAME
-Title: BOOK_TITLE
+Package: BM110-Microbiology-Lab
+Title: "BM110 Microbiology Lab: Statistical Support"
 Version: 0.1
 Authors@R: c(
-    person("FORENAME1", "SURNAME1", , "EMAIL.1@strath.ac.uk", role = c("aut", "cre")),
-    person("FORENAME2", "SURNAME2", , "EMAIL.2@strath.ac.uk", role = c("aut", "cre"))
+    person("Leighton", "Pritchard", , "leighton.pritchard@strath.ac.uk", role = c("aut", "cre")),
   )
-URL: https://github.com/sipbs-compbiol/sipbs-compbiol-book-template
+URL: https://github.com/sipbs-compbiol/BM110-Microbiology-Lab
 Depends: 
-    R (>= 3.1.0)
+    R (>= 4.5.0)
 Imports:
     tidyverse (>= 2.0.0),
     ggplot2,
