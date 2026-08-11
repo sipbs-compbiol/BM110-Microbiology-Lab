@@ -45,3 +45,5 @@ Plating 100µL of the $10^{-1}$ dilution resulted in 37 CFU. That volume is 0.1m
 
 The $10^{-1}$ dilution contains **X** CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we'd expect to see ten times the count of CFU in each mL of the original sample: $10 \times 370 = 3700 = 3,700 = 3.7 \times 10^3 = 3.7e3$ CFU/mL.
 :::
+
+<iframe src="https://numbas.mathcentre.ac.uk/question/210520/calculate-cfu-ml-given-a-decimal-dilution-and-colo/embed/" width="780" height="500"></iframe>
