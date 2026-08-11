@@ -1,0 +1,31 @@
+# The Scenario {#sec-intro .unnumbered}
+
+You have been asked to investigate whether the use of prophylactic antibiotics affects the distribution of antimicrobial-resitant bacteria in farm soils. The sampling for this experiment has been carried out at random sites on two neighbouring farms (@fig-os-map).
+
+![OS-style map showing the locations of the fictional farms providing the simulated data. (Figure generated using ChatGPT)](images/farm_map.png){#fig-os-map .lightbox width=80%}
+
+
+::: { .callout-case-study title="Farm A" }
+Farm A (Greenfields Farm) uses standard farming practices, and **chooses not to use prophylactic antibiotics** to aid growth or prevent infection in livestock.
+:::
+
+::: { .callout-case-study title="Farm B" }
+Farm B (Brookside Farm) uses intensive practices (often referred to as "factory farming"), and **does use prophylactic antibiotics** to aid growth and prevent infection in its livestock.
+:::
+
+## Sampling Design Details
+
+A surprising number of factors can influence the biological communities in soil (@Plassart2019-lq) so the two farms were chosen to be matched as closely as possible. We are interested only in the relative effects of wither using or not using prophylactic antibiotic treatments, such that we can assume there is no other [_confounding_](https://en.wikipedia.org/wiki/Confounding) influence on bacterial counts due to other factors such as:
+
+- Soil type
+- Land use
+- Hydrology
+- Elevation
+
+Here, the two farms are neighbours, of similar size, and share the same soil type. They are equidistant from the local watercourse (Mill Brook), and farm the same combinations of crops and livestock breeds. The farmers are even related to each other.
+
+Soil samples were taken at random locations across each farm, representative of all fields and trafficked areas.
+
+::: { .callout-important }
+On the basis of our sampling design, we therefore assume that there is no relevant influence on bacterial community differences between the two farms, other than the use (or non-use) of prophylactic antibiotics.
+:::
