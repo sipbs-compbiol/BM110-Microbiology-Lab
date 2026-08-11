@@ -68,7 +68,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./webr-example.html" rel="next">
+<link href="./numbas.html" rel="next">
 <link href="./embedpdf.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -119,15 +119,15 @@ div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.c
   content: '👍';
   background-image: none;
 }
-div.callout-callout-discussion.callout {
-  border-left-color: #BA55D3;
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
 }
-div.callout-callout-discussion.callout-style-default .callout-header {
-  background-color: rgba(186, 85, 211, 0.13);
+div.callout-callout-questions.callout-style-default .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
 }
-div.callout-callout-discussion .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-discussion.callout-style-default .callout-icon::before, div.callout-callout-discussion.callout-titled .callout-icon::before {
-  content: '✨';
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-question.callout {
@@ -141,26 +141,15 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   content: '🙋';
   background-image: none;
 }
-div.callout-callout-microbe.callout {
-  border-left-color: #1E90FF;
+div.callout-callout-challenge.callout {
+  border-left-color: aquamarine;
 }
-div.callout-callout-microbe.callout-style-default .callout-header {
-  background-color: rgba(30, 144, 255, 0.13);
+div.callout-callout-challenge.callout-style-default .callout-header {
+  background-color: rgb(from aquamarine r g b / 13%);
 }
-div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
-  content: '🧫';
-  background-image: none;
-}
-div.callout-callout-data.callout {
-  border-left-color: #32CD32;
-}
-div.callout-callout-data.callout-style-default .callout-header {
-  background-color: rgba(50, 205, 50, 0.13);
-}
-div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
-  content: '📊';
+div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
+  content: '🧑‍🏫';
   background-image: none;
 }
 div.callout-callout-todo.callout {
@@ -174,6 +163,28 @@ div.callout-callout-todo.callout-style-default .callout-icon::before, div.callou
   content: '📝';
   background-image: none;
 }
+div.callout-callout-data.callout {
+  border-left-color: #32CD32;
+}
+div.callout-callout-data.callout-style-default .callout-header {
+  background-color: rgba(50, 205, 50, 0.13);
+}
+div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
+  content: '📊';
+  background-image: none;
+}
+div.callout-callout-microbe.callout {
+  border-left-color: #1E90FF;
+}
+div.callout-callout-microbe.callout-style-default .callout-header {
+  background-color: rgba(30, 144, 255, 0.13);
+}
+div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
+  content: '🧫';
+  background-image: none;
+}
 div.callout-callout-case-study.callout {
   border-left-color: #FFA500;
 }
@@ -185,26 +196,15 @@ div.callout-callout-case-study.callout-style-default .callout-icon::before, div.
   content: '🔍';
   background-image: none;
 }
-div.callout-callout-challenge.callout {
-  border-left-color: aquamarine;
+div.callout-callout-discussion.callout {
+  border-left-color: #BA55D3;
 }
-div.callout-callout-challenge.callout-style-default .callout-header {
-  background-color: rgb(from aquamarine r g b / 13%);
+div.callout-callout-discussion.callout-style-default .callout-header {
+  background-color: rgba(186, 85, 211, 0.13);
 }
-div.callout-callout-challenge .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-challenge.callout-style-default .callout-icon::before, div.callout-callout-challenge.callout-titled .callout-icon::before {
-  content: '🧑‍🏫';
-  background-image: none;
-}
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
-}
-div.callout-callout-questions.callout-style-default .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
-}
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-discussion .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-discussion.callout-style-default .callout-icon::before, div.callout-callout-discussion.callout-titled .callout-icon::before {
+  content: '✨';
   background-image: none;
 }
 </style>
@@ -262,8 +262,8 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
+  <a href="./data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -315,20 +315,8 @@ div.callout-callout-questions.callout-style-default .callout-icon::before, div.c
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./webr-example.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><code>WebR</code> Playground</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./shinylive.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="./numbas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span></a>
   </div>
 </li>
       </ul>
@@ -925,25 +913,25 @@ Caution
 </div>
 <div class="callout-body-container callout-body">
 <div class="question">
-<p>What is the sum of 1 and 15?</p>
+<p>What is the sum of 3 and 16?</p>
 <div class="choices">
 <div x-data="{ answer: '' , clear() { this.answer = '' }}">
 
 <div class="choice">
 <p></p>
-<p><input class="form-check-input" type="radio" x-model="answer" value="no1"><span id="no1" x-show="answer == $el.id" class="badge">✗</span>-14</p>
+<p><input class="form-check-input" type="radio" x-model="answer" value="no1"><span id="no1" x-show="answer == $el.id" class="badge">✗</span>-13</p>
 </div>
 <div class="choice correct-choice">
 <p></p>
-<p><input class="form-check-input" type="radio" x-model="answer" value="correct"><span id="correct" x-show="answer == $el.id" class="badge">✓</span>16</p>
+<p><input class="form-check-input" type="radio" x-model="answer" value="correct"><span id="correct" x-show="answer == $el.id" class="badge">✓</span>19</p>
 </div>
 <div class="choice">
 <p></p>
-<p><input class="form-check-input" type="radio" x-model="answer" value="no3"><span id="no3" x-show="answer == $el.id" class="badge">✗</span>14</p>
+<p><input class="form-check-input" type="radio" x-model="answer" value="no3"><span id="no3" x-show="answer == $el.id" class="badge">✗</span>13</p>
 </div>
 <div class="choice">
 <p></p>
-<p><input class="form-check-input" type="radio" x-model="answer" value="no4"><span id="no4" x-show="answer == $el.id" class="badge">✗</span>15</p>
+<p><input class="form-check-input" type="radio" x-model="answer" value="no4"><span id="no4" x-show="answer == $el.id" class="badge">✗</span>48</p>
 </div>
 <div class="button-clear" title="Clear answer" data-button-class="btn btn-xs">
 <button x-on:click="clear()" class="btn btn-xs">Clear answer</button>
@@ -960,7 +948,7 @@ Caution
 <div x-data="{ open: false }">
 <button x-on:click="open = ! open" class="btn btn-xs">Show hint</button>
 <div x-show="open" x-transition.duration.200ms="" x-on:click.outside="open = false" class="card card-body border-warning">
-<p>You need to add the two numbers 1 and 15</p>
+<p>You need to add the two numbers 3 and 16</p>
 </div>
 </div>
 
@@ -969,7 +957,7 @@ Caution
 <div x-data="{ open: false }">
 <button x-on:click="open = ! open" class="btn btn-xs">Show Answer</button>
 <div x-show="open" x-transition.duration.200ms="" x-on:click.outside="open = false" class="card card-body border-info">
-<p>1 + 15 = 16</p>
+<p>3 + 16 = 19</p>
 </div>
 </div>
 
@@ -1436,8 +1424,8 @@ Caution
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./webr-example.html" class="pagination-link" aria-label="`WebR` Playground">
-        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><code>WebR</code> Playground</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./numbas.html" class="pagination-link" aria-label="Embedding Numbas Questions">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
