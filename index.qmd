@@ -10,11 +10,21 @@ These pages provide support and background to the statistical calculations you w
 
 The practical work aims to determine whether antimicrobial use in factory farming might contribute to spillover of antimicrobial resistance genes in the environment.
 
-To test this hypothesis (that antimicrobial use on a farm results in greater occurrence of antimicrobial-resistant bacteria), a number of soil samples have been collected from two different farms, A and B. These two farms have differing practices, most specifically concerning their prophylactic use of antimicrobials.
+To test this hypothesis, that antimicrobial use on a farm results in greater occurrence of antimicrobial-resistant bacteria, a number of soil samples have been collected from two different farms, A and B (@fig-os-map). These two farms have differing practices, most specifically concerning their prophylactic use of antimicrobials.
 
-In the laboratory, you plated out (collectively) two serial dilutions ($10^{-1}$ and $10^{-2}$) of bacteria from two farm soil samples, and observed the number of colonies on each plate to obtain (again collectively) colony-forming unit (CFU) measurements for each of four conditions:
+![OS-style map showing the locations of the fictional farms providing the simulated data. (Figure generated using ChatGPT)](images/farm_map.png){#fig-os-map .lightbox width=80%}
+
+In the laboratory, you plated out (collectively) two serial dilutions ($10^{-1}$ and $10^{-2}$) of bacteria from the two farm soil samples, and observed the number of colonies on each plate to obtain (again collectively) colony-forming unit (CFU) measurements for each of four conditions:
 
 1. Farm A, nutrient agar (NA)
 2. Farm A, nutrient agar + Ampicillin (Amp)
 3. Farm B, nutrient agar (NA)
 4. Farm B, nutrient agar + Ampicillin (Amp)
+
+This allows us to test statistically whether there is quantitative support for the following hypotheses:
+
+1. Do we recover different counts of bacteria from farms A and B?
+2. Do we recover different counts of bacteria on nutrient agar + Ampicillin than on nutrient agar alone?
+3. Does the difference or proportion in count between nutrient agar + Ampicillin, and nutrient agar differ between the two farms?
+
+These pages will walk you through the required statistical calculations.
