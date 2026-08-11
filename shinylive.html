@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Leighton Pritchard">
-<title>10&nbsp; Using shinylive – BM110 Microbiology Laboratory: Statistical Support</title>
+<title>9&nbsp; Using shinylive – BM110 Microbiology Laboratory: Statistical Support</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -80,7 +80,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-3d497cff885f6278d37568d0ef0763f8.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-343830dee7e81009abd9657442190b55.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/alpine-3.12/buttons.css" rel="stylesheet">
 <meta name="shinylive:serviceworker_dir" content=".">
 <script src="site_libs/quarto-contrib/shinylive-0.10.12/shinylive/load-shinylive-sw.js" type="module"></script>
@@ -124,26 +124,15 @@ div.callout-callout-case-study.callout-style-default .callout-icon::before, div.
   content: '🔍';
   background-image: none;
 }
-div.callout-callout-todo.callout {
-  border-left-color: pink;
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
 }
-div.callout-callout-todo.callout-style-default .callout-header {
-  background-color: rgb(from pink r g b / 13%);
+div.callout-callout-questions.callout-style-default .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
 }
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
-  background-image: none;
-}
-div.callout-callout-data.callout {
-  border-left-color: #32CD32;
-}
-div.callout-callout-data.callout-style-default .callout-header {
-  background-color: rgba(50, 205, 50, 0.13);
-}
-div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
-  content: '📊';
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-thumbs-up.callout {
@@ -157,26 +146,15 @@ div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.c
   content: '👍';
   background-image: none;
 }
-div.callout-callout-question.callout {
-  border-left-color: yellow;
+div.callout-callout-data.callout {
+  border-left-color: #32CD32;
 }
-div.callout-callout-question.callout-style-default .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
+div.callout-callout-data.callout-style-default .callout-header {
+  background-color: rgba(50, 205, 50, 0.13);
 }
-div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
-  content: '🙋';
-  background-image: none;
-}
-div.callout-callout-microbe.callout {
-  border-left-color: #1E90FF;
-}
-div.callout-callout-microbe.callout-style-default .callout-header {
-  background-color: rgba(30, 144, 255, 0.13);
-}
-div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
-  content: '🧫';
+div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
+  content: '📊';
   background-image: none;
 }
 div.callout-callout-discussion.callout {
@@ -190,15 +168,37 @@ div.callout-callout-discussion.callout-style-default .callout-icon::before, div.
   content: '✨';
   background-image: none;
 }
-div.callout-callout-questions.callout {
+div.callout-callout-microbe.callout {
+  border-left-color: #1E90FF;
+}
+div.callout-callout-microbe.callout-style-default .callout-header {
+  background-color: rgba(30, 144, 255, 0.13);
+}
+div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
+  content: '🧫';
+  background-image: none;
+}
+div.callout-callout-todo.callout {
+  border-left-color: pink;
+}
+div.callout-callout-todo.callout-style-default .callout-header {
+  background-color: rgb(from pink r g b / 13%);
+}
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
+  background-image: none;
+}
+div.callout-callout-question.callout {
   border-left-color: yellow;
 }
-div.callout-callout-questions.callout-style-default .callout-header {
+div.callout-callout-question.callout-style-default .callout-header {
   background-color: rgb(from yellow r g b / 13%);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-question .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-question.callout-style-default .callout-icon::before, div.callout-callout-question.callout-titled .callout-icon::before {
+  content: '🙋';
   background-image: none;
 }
 div.callout-callout-challenge.callout {
@@ -222,7 +222,7 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./example_pages.html">Example pages</a></li><li class="breadcrumb-item"><a href="./shinylive.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./example_pages.html">Example pages</a></li><li class="breadcrumb-item"><a href="./shinylive.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -257,16 +257,10 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
  <span class="menu-text">Preface to the 2026-27 presentation</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./early-section.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">How Do I Use This?</span></a>
+            <a href="./scenario.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">The Scenario</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -275,19 +269,19 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./tutorial.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Getting started</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./howto.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">How do I…?</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">How do I…?</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Useful links</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Useful links</span></span></a>
   </div>
 </li>
       </ul>
@@ -304,43 +298,43 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./callouts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Custom Callouts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Custom Callouts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./movies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Embedding video files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Embedding video files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./embedpdf.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Embedding PDF files</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Embedding PDF files</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Multiple Choice Questions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Interactive Multiple Choice Questions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./webr-example.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><code>WebR</code> Playground</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><code>WebR</code> Playground</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./shinylive.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./numbas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span></a>
   </div>
 </li>
       </ul>
@@ -359,21 +353,21 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#the-fundamentals-of-a-shiny-app" id="toc-the-fundamentals-of-a-shiny-app" class="nav-link active" data-scroll-target="#the-fundamentals-of-a-shiny-app"><span class="header-section-number">10.1</span> The fundamentals of a Shiny app</a></li>
+<li><a href="#the-fundamentals-of-a-shiny-app" id="toc-the-fundamentals-of-a-shiny-app" class="nav-link active" data-scroll-target="#the-fundamentals-of-a-shiny-app"><span class="header-section-number">9.1</span> The fundamentals of a Shiny app</a></li>
   <li>
-<a href="#what-you-need-to-do-special-for-shinylive" id="toc-what-you-need-to-do-special-for-shinylive" class="nav-link" data-scroll-target="#what-you-need-to-do-special-for-shinylive"><span class="header-section-number">10.2</span> What you need to do special for <code>shinylive</code></a>
+<a href="#what-you-need-to-do-special-for-shinylive" id="toc-what-you-need-to-do-special-for-shinylive" class="nav-link" data-scroll-target="#what-you-need-to-do-special-for-shinylive"><span class="header-section-number">9.2</span> What you need to do special for <code>shinylive</code></a>
   <ul class="collapse">
-<li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">10.2.1</span> Example</a></li>
+<li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example"><span class="header-section-number">9.2.1</span> Example</a></li>
   </ul>
 </li>
-  <li><a href="#sec-editor" id="toc-sec-editor" class="nav-link" data-scroll-target="#sec-editor"><span class="header-section-number">10.3</span> Adding the <code>R</code> editor</a></li>
-  <li><a href="#installing-the-shinylive-extension" id="toc-installing-the-shinylive-extension" class="nav-link" data-scroll-target="#installing-the-shinylive-extension"><span class="header-section-number">10.4</span> Installing the <code>shinylive</code> extension</a></li>
+  <li><a href="#sec-editor" id="toc-sec-editor" class="nav-link" data-scroll-target="#sec-editor"><span class="header-section-number">9.3</span> Adding the <code>R</code> editor</a></li>
+  <li><a href="#installing-the-shinylive-extension" id="toc-installing-the-shinylive-extension" class="nav-link" data-scroll-target="#installing-the-shinylive-extension"><span class="header-section-number">9.4</span> Installing the <code>shinylive</code> extension</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM110-Microbiology-Lab/edit/main/shinylive.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM110-Microbiology-Lab/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./example_pages.html">Example pages</a></li><li class="breadcrumb-item"><a href="./shinylive.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./example_pages.html">Example pages</a></li><li class="breadcrumb-item"><a href="./shinylive.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span>
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Using <code>shinylive</code></span>
 </h1>
 </div>
 
@@ -388,7 +382,7 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   
 
 
-</header><p><code>shinylive</code> is an extension and <code>R</code> package that allows for embedding a <em>serverless</em> Shiny application in a Quarto page, as we do in <a href="#fig-shinylive-example" class="quarto-xref">Figure&nbsp;<span>10.1</span></a>.</p>
+</header><p><code>shinylive</code> is an extension and <code>R</code> package that allows for embedding a <em>serverless</em> Shiny application in a Quarto page, as we do in <a href="#fig-shinylive-example" class="quarto-xref">Figure&nbsp;<span>9.1</span></a>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="" aria-current="page">Appearance</a></li>
@@ -461,7 +455,7 @@ server &lt;- function(input, output, session) {
 shinyApp(ui = ui, server = server)</a></code></pre>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shinylive-example-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.1: Interactive <code>shinylive</code> example showing random samples from a Normal distribution. Click the ‘Pause’ checkbox to freeze on a sample. Use the ‘Sample count’ option to choose the number of samples. The black line shows the Normal distribution being sampled from, and the dashed red line shows the population mean. The solid blue line shows the sample mean. The grey histogram shows the sample.
+Figure&nbsp;9.1: Interactive <code>shinylive</code> example showing random samples from a Normal distribution. Click the ‘Pause’ checkbox to freeze on a sample. Use the ‘Sample count’ option to choose the number of samples. The black line shows the Normal distribution being sampled from, and the dashed red line shows the population mean. The solid blue line shows the sample mean. The grey histogram shows the sample.
 </figcaption></figure>
 </div>
 </div>
@@ -531,8 +525,8 @@ Figure&nbsp;10.1: Interactive <code>shinylive</code> example showing random samp
 </div>
 </div>
 </div>
-<section id="the-fundamentals-of-a-shiny-app" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="the-fundamentals-of-a-shiny-app">
-<span class="header-section-number">10.1</span> The fundamentals of a Shiny app</h2>
+<section id="the-fundamentals-of-a-shiny-app" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="the-fundamentals-of-a-shiny-app">
+<span class="header-section-number">9.1</span> The fundamentals of a Shiny app</h2>
 <p>We don’t have space here for a tutorial on how to use Shiny. There is a learning curve, and we can recommend a number of online resources for you to get up to speed with this package, including:</p>
 <ul>
 <li>
@@ -568,8 +562,8 @@ Figure&nbsp;10.1: Interactive <code>shinylive</code> example showing random samp
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="fu">shinyApp</span>(<span class="at">ui =</span> ui, <span class="at">server =</span> server)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-</section><section id="what-you-need-to-do-special-for-shinylive" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="what-you-need-to-do-special-for-shinylive">
-<span class="header-section-number">10.2</span> What you need to do special for <code>shinylive</code>
+</section><section id="what-you-need-to-do-special-for-shinylive" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="what-you-need-to-do-special-for-shinylive">
+<span class="header-section-number">9.2</span> What you need to do special for <code>shinylive</code>
 </h2>
 <p>Under normal circumstances, the Shiny code with the three elements above would run on a Shiny server, and you wouldn’t need to do much else. But with <code>shinylive</code> and Quarto you need to place the app on the page, and tell Quarto that you want to use the <code>shinylive</code> filter. Firstly, the header of the page should be defined in <code>YAML</code> as, e.g.:</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="pp">---</span></span>
@@ -590,7 +584,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The <code>format:</code> section is required to fix a layout problem with <code>r-shinylive</code> interactive editors, described in <a href="#sec-editor" class="quarto-xref"><span>Section 10.3</span></a>.</p>
+<p>The <code>format:</code> section is required to fix a layout problem with <code>r-shinylive</code> interactive editors, described in <a href="#sec-editor" class="quarto-xref"><span>Section 9.3</span></a>.</p>
 </div>
 </div>
 <p>This requires a new kind of fenced block stating that it is <code>{shinylive-r}</code>:</p>
@@ -617,9 +611,9 @@ Important
 <p>The <code>standalone:true</code> setting is required for the compiled app to run in your public repository. This setting tells <code>shinylive</code> that the entire app is contained within the fenced code block.</p>
 </div>
 </div>
-<section id="example" class="level3" data-number="10.2.1"><h3 data-number="10.2.1" class="anchored" data-anchor-id="example">
-<span class="header-section-number">10.2.1</span> Example</h3>
-<p>The <code>shinylive</code> example in <a href="#fig-shinylive-ggplot2" class="quarto-xref">Figure&nbsp;<span>10.2</span></a> below is fairly short but includes some important points of difference from <a href="#fig-shinylive-example" class="quarto-xref">Figure&nbsp;<span>10.1</span></a>.</p>
+<section id="example" class="level3" data-number="9.2.1"><h3 data-number="9.2.1" class="anchored" data-anchor-id="example">
+<span class="header-section-number">9.2.1</span> Example</h3>
+<p>The <code>shinylive</code> example in <a href="#fig-shinylive-ggplot2" class="quarto-xref">Figure&nbsp;<span>9.2</span></a> below is fairly short but includes some important points of difference from <a href="#fig-shinylive-example" class="quarto-xref">Figure&nbsp;<span>9.1</span></a>.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist">
 <li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Appearance</a></li>
@@ -662,7 +656,7 @@ server &lt;- function(input, output, session) {
 shinyApp(ui = ui, server = server)</a></code></pre>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shinylive-ggplot2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.2: <code>shinylive</code> example using <code>ggplot2</code>, <code>DT</code>, and allowing for interactive selection of points from the graph.
+Figure&nbsp;9.2: <code>shinylive</code> example using <code>ggplot2</code>, <code>DT</code>, and allowing for interactive selection of points from the graph.
 </figcaption></figure>
 </div>
 </div>
@@ -759,10 +753,10 @@ Figure&nbsp;10.2: <code>shinylive</code> example using <code>ggplot2</code>, <co
 <span><span class="op">}</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
-</section></section><section id="sec-editor" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="sec-editor">
-<span class="header-section-number">10.3</span> Adding the <code>R</code> editor</h2>
+</section></section><section id="sec-editor" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="sec-editor">
+<span class="header-section-number">9.3</span> Adding the <code>R</code> editor</h2>
 <p>The examples above allow for user interaction, but not user editing of the code. With <code>shinylive</code> it is possible to include an editor so that users can modify the code of the app directly, in their own browser.</p>
-<p>To do this, include the code block setting: <code>#| components: [editor, viewer]</code>, as in <a href="#fig-shinylive-editor" class="quarto-xref">Figure&nbsp;<span>10.3</span></a>.</p>
+<p>To do this, include the code block setting: <code>#| components: [editor, viewer]</code>, as in <a href="#fig-shinylive-editor" class="quarto-xref">Figure&nbsp;<span>9.3</span></a>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -838,7 +832,7 @@ server &lt;- function(input, output, session) {
 shinyApp(ui = ui, server = server)</a></code></pre>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-shinylive-editor-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;10.3: <code>shinylive</code> example using <code>ggplot2</code>, <code>DT</code>, and allowing for interactive selection of points from the graph.
+Figure&nbsp;9.3: <code>shinylive</code> example using <code>ggplot2</code>, <code>DT</code>, and allowing for interactive selection of points from the graph.
 </figcaption></figure>
 </div>
 </div>
@@ -928,8 +922,8 @@ Figure&nbsp;10.3: <code>shinylive</code> example using <code>ggplot2</code>, <co
 <p>and run the code (click on the triangle, or press <code>Shift-Return</code>/<code>Cmd-Shift-Return</code>)</p>
 </div>
 </div>
-</section><section id="installing-the-shinylive-extension" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="installing-the-shinylive-extension">
-<span class="header-section-number">10.4</span> Installing the <code>shinylive</code> extension</h2>
+</section><section id="installing-the-shinylive-extension" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="installing-the-shinylive-extension">
+<span class="header-section-number">9.4</span> Installing the <code>shinylive</code> extension</h2>
 <ul>
 <li><a href="https://github.com/coatless-quarto/r-shinylive-demo"><code>shinylive</code> extension repository</a></li>
 </ul>
@@ -1353,12 +1347,12 @@ Important
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./webr-example.html" class="pagination-link" aria-label="`WebR` Playground">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title"><code>WebR</code> Playground</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title"><code>WebR</code> Playground</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./numbas.html" class="pagination-link" aria-label="Embedding Numbas Questions">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
