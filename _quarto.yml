@@ -39,7 +39,7 @@ book:
 
     - part: scenario.qmd
       chapters: 
-        - tutorial.qmd
+        - data.qmd
         - howto.qmd
         - links.qmd
     
