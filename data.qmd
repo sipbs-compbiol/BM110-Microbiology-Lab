@@ -28,6 +28,7 @@ The $10^{-2}$ dilution has been diluted 100-fold (i.e. 100 times) compared to th
 From @fig-handbook-table we can see that the $10^{-1}$ dilution gives a count of 37 CFU on the NA/Amp plate.
 
 What is the CFU/mL of the sample supernatant when grown on the NA/Amp plate?
+:::
 
 ::: { .callout-tip collapse=true title="Hint"}
 Use the example above for the NA plate as a guide.
@@ -43,5 +44,4 @@ The $10^{-1}$ dilution contains **X** CFU/mL, but this is a 10-fold dilution of 
 Plating 100µL of the $10^{-1}$ dilution resulted in 37 CFU. That volume is 0.1mL so, if 1mL (ten times as much) had been plated out we would have expected to see ten times as many CFU: $10 \times 37 = 370$ CFU in one mL.
 
 The $10^{-1}$ dilution contains **X** CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we'd expect to see ten times the count of CFU in each mL of the original sample: $10 \times 370 = 3700 = 3,700 = 3.7 \times 10^3 = 3.7e3$ CFU/mL.
-:::
 :::
