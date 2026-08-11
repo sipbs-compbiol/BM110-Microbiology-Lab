@@ -1,5 +1,6 @@
 ---
 title: "Using `shinylive`"
+engine: knitr
 filters:
   - shinylive
 format: 
