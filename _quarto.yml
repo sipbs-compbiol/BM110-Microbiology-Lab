@@ -49,8 +49,6 @@ book:
         - movies.qmd
         - embedpdf.qmd
         - quiz.qmd
-        - webr-example.qmd
-        - shinylive.qmd
         - numbas.qmd
 
     - references.qmd
