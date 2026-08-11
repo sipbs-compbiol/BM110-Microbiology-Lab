@@ -20,3 +20,4 @@ _freeze/
 # LaTeX build intermediates/output
 *.log
 index.tex
+**/*.quarto_ipynb
