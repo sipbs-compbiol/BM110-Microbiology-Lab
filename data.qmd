@@ -1,4 +1,4 @@
-# Example Data
+# Counting CFUs
 
 The soil samples obtained from farms A and B were analysed by you and your colleagues in the [BM110 Microbiology Laboratory](https://classes.myplace.strath.ac.uk/course/view.php?id=21634&section=19). Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment as illustrated in @fig-culture-experiment
 
