@@ -27,4 +27,4 @@ This allows us to test statistically whether there is quantitative support for t
 2. Do we recover different counts of bacteria on nutrient agar + Ampicillin than on nutrient agar alone?
 3. Does the difference or proportion in count between nutrient agar + Ampicillin, and nutrient agar differ between the two farms?
 
-These pages will walk you through the required statistical calculations.
+These pages will walk you through the relevant statistical analyses.
