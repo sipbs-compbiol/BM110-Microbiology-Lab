@@ -1,6 +1,7 @@
 ---
 webr:
   packages: ["tidyverse", "palmerpenguins"]
+engine: knitr
 filters:
   - webr
 ---
