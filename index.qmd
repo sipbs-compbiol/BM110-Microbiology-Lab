@@ -1,12 +1,12 @@
-# Preface to the {{< var ay >>}} presentation {.unnumbered}
+# Preface to the {{< var ay >}} presentation {.unnumbered}
 
-Welcome to the {{< var ay >>}} edition of the statistics supporting information for the BM110 microbiology laboratory.
+Welcome to the {{< var ay >}} edition of the statistics supporting information for the BM110 microbiology laboratory.
 
 We would be very grateful to hear feedback about this workshop material [by email]({{< var admin.email >}}) or through the [GitHub repository Issues page]({{< var github.issues >}}).
 
 ## Overview
 
-These pages provide support and background to the statistical calculations you will be using in the BM110 microbiology laboratories.
+These pages provide support and background to the statistical calculations you will be using in the [BM110 microbiology laboratories](https://classes.myplace.strath.ac.uk/course/view.php?id=21634&section=19).
 
 The practical work aims to determine whether antimicrobial use in factory farming might contribute to spillover of antimicrobial resistance genes in the environment.
 
