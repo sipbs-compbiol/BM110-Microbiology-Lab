@@ -19,7 +19,7 @@ book:
     left: |
       These pages created by Dr Leighton Pritchard
     right: |
-      This book was built with <a href="https://quarto.org/">Quarto</a>.
+      This book was built with <a href=https://quarto.org/>Quarto</a>.
 
   # Sets the URL for the repository
   # [C] GITHUB REPOSITORY URL
@@ -30,7 +30,7 @@ book:
   # Sets author information and publication/presentation date
   # [D] AUTHOR INFORMATION AND PUBLICATION/PRESENTATION DATE
   author: "Leighton Pritchard"
-  date: "10/08/26"
+  date: "08/10/26"
 
   # Define chapters and sections here
   # [E] CHAPTERS AND SECTIONS
