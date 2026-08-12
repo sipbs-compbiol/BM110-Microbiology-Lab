@@ -39,6 +39,7 @@ book:
 
     - part: scenario.qmd
       chapters: 
+        - cfus.qmd
         - data.qmd
         - howto.qmd
         - links.qmd
