@@ -1,2 +1,113 @@
-# Data Analysis
+---
+code-fold: true
+code-summary: Click to see the `R` code
+---
+
+# Simulated Data
+
+We have simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, as though there are 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in @tbl-dataset, and can be inspected in the file [`farm_scenario_1.tsv`](assets/data/farm_scenario_1.tsv).
+
+```{r}
+#| label: tbl-dataset
+#| tbl-cap: Simulated experimental data for the BM110 microbiology laboratory experiment. There are 25 samples each from farms A and B, each plated on nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates to calculate CFU/mL values in the presence and absence of antibiotic selection. Columns indicate sample number, farm identifier, the CFU/mL obtained from the NA plate (`CFU_NA`), and the CFU/mL obtained from the NA/Amp plate (`CFU_NA_AMP`).
+
+# Read experiment data
+dfm <- readr::read_tsv(file.path("assets", "data", "farm_scenario_1.tsv"),
+                       col_types="ffdd")
+
+DT::datatable(dfm)
+```
+
+## Data structure
+
+The data in @tbl-dataset are structured in four columns.
+
+1. `sample`: this is a number indicating the identity of a sample that was taken from a named farm. Each sample was plated out onto NA and NA/Amp plates.
+2. `farm`: this is the identifer of the farm from which the sample was taken[^blinding].
+3. `CFU_NA`: the calculated CFU/mL when plating the sample on an NA plate
+4. `CFU_NA_Amp`: the calculated CFU/mL when plating the sample on an NA/Amp plate
+
+::: { .callout-note }
+The `sample` and `farm` columns are _factors_: discrete labels for the datapoints. They are [_independent (or explanatory) variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) in the sense that their values are static and do not depend on any other observations in the experiment.
+
+The `CFU_NA` and `CFU_NA_Amp` columns are integer values, and are [_dependent variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) because we assume their value depends on the values taken by other variables in the experiment. Specifically, we assume that the recovered CFU/mL values we observe vary _depending_ on which sample is analysed, and which farm it was sampled from. The two values for each sample are [_paired data_](https://en.wikipedia.org/wiki/Paired_data).
+:::
+
+## Data visualisation
+
+It is always useful to visualise a dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of potential issues for analysis. In @fig-visualisation-1 we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed and do not seem to meet the requirements of many statistical analyses (i.e. normally-distributed residuals).
+
+```{r warning=FALSE}
+#| label: fig-visualisation-1
+#| fig-cap: KDE plots of data distribution for each combination of farm and plate
+
+dfm_plot <- dfm |>
+  tidyr::pivot_longer(cols=c("CFU_NA", "CFU_NA_AMP"),
+                      names_to="plate",
+                      values_to="cfu") |>
+  dplyr::mutate(farm_plate=interaction(farm, plate))
+
+ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
+                                       colour=farm_plate)) +
+  ggridges::geom_density_ridges(fill=NA) +
+  ggplot2::labs(title="Distribution of total CFU/mL by farm/plate combination",
+                y="Farm/Plate", x="CFU/mL") +
+  ggplot2::theme_minimal()
+```
+
+The CFU/mL data are, however, bacterial growth data and are typically logarithmic. It is natural to present such data on a logarithmic axis, as in @fig-visualisation-2.
+
+```{r}
+#| label: fig-visualisation-2
+#| fig-cap: KDE plots of data distribution for each combination of farm and plate, with a logarithmic _x_-axis.
+
+ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
+                                       colour=farm_plate)) +
+  ggridges::geom_density_ridges(fill=NA) +
+  ggplot2::labs(title="Distribution of total CFU/mL by farm/plate combination",
+                y="Farm/Plate", x="CFU/mL") +
+  ggplot2::theme_minimal() +
+  ggplot2::scale_x_log10()
+```
+
+Although the KDE plots in @fig-visualisation-2 are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (@West2022-wp), and is a typical action when working with bacterial growth data.
+
+## Log transformation
+
+Where it is appropriate, such as here, it is typical to take the log transformed values for statistical analysis, rather than just plot on a logarithmically-transformed axis. The transformed data is shown in @tbl-logtrans, and is plotted on a standard _x_-axis in @fig-visualisation-3.
+
+```{r}
+#| label: tbl-logtrans
+#| tbl-cap: The data from @tbl-dataset after log transformation
+
+# log-transform the observed CFU/mL for each sample
+dfm <- dfm |>
+  dplyr::mutate(log_CFU_NA = round(log10(CFU_NA), 4)) |>
+  dplyr::mutate(log_CFU_NA_AMP = round(log10(CFU_NA_AMP), 4))
+
+DT::datatable(dfm)
+```
+
+```{r}
+#| label: fig-visualisation-3
+#| fig-cap: KDE plots of log-transformed CFU/mL for each combination of farm and plate.
+
+dfm_plot <- dfm |>
+  tidyr::pivot_longer(cols=c("log_CFU_NA", "log_CFU_NA_AMP"),
+                      names_to="plate",
+                      values_to="log_cfu") |>
+  dplyr::mutate(farm_plate=interaction(farm, plate))
+
+ggplot2::ggplot(dfm_plot, ggplot2::aes(x=log_cfu, y=farm_plate,
+                                       colour=farm_plate)) +
+  ggridges::geom_density_ridges(fill=NA) +
+  ggplot2::labs(title="Distribution of log10(CFU/mL) by farm/plate combination",
+                y="Farm/Plate", x="log10(CFU/mL)") +
+  ggplot2::theme_minimal() +
+  ggplot2::scale_x_log10()
+```
+
+The plot in @fig-visualisation-3 strongly resembles that in @fig-visualisation-2 (other than the _x_-axis labels), because it is the same mathematical operation. We can now work directly with the log-transformed values in `log_CFU_NA` and `log_CFU_NA_AMP`, as they meet the assumptions of standard statistical tests more closely.
+
+[^blinding]: In a _blinded_ experiment, we may not know which farm a sample was taken from. Here, because we specifically want to compare results between farms, the identity of each farm is provided.
 
