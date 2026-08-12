@@ -1,0 +1,48 @@
+# Statistical Analysis
+
+## Analysis design
+
+This experiment is structured such that we expect a single _explanatory variable_ to affect the observed values of CFU/mL: the farm from which the sample was taken. The farms have a single point of difference: the use, or non-use, of antibiotics on each farm, which affects the number of bacteria from the sample that can survive on the selective NA/Amp plate.
+
+::: { .callout-important }
+We expect that the total number of recoverable bacteria on the NA plate may vary from sample to sample, for the same farm. For example, some parts of the farm might be more bacteria-rich than others (we have simulated this in the data).
+
+_For any particular sample_, we expect fewer bacteria to be recovered from the NA/Amp plate than the NA plate, because the antibiotic only allows a subset of the bacterial population to grow.
+
+So, for a single sample, we expect the numbers of bacteria (as CFU/mL) recovered on the NA/Amp plate to be _constrained_ by the number that are recoverable on the NA plate. We do not, for instance, expect to recover more CFU/mL from the NA/Amp plate than the NA plate for any sample. The two measurements _are not independent of each other_.
+
+**Our choice of statistical analysis must take this non-independence into account.**
+:::
+
+What we are interested in is the reduction in viable count (CFU/mL) for each sample when plated on NA/Amp in contrast to plating on NA, and we need some way to represent this.
+
+### Two kinds of reduction in CFU/mL
+
+There are two ways we can consider the difference between CFU/mL on the two media. These two approaches reflect _distinct assumptions about how the biological system behaves_. They are:
+
+1. A **difference in absolute count** (`CFU_NA` - `CFU_NA_AMP`): this would be appropriate if we believed that plating on NA/Amp induced a consistent difference in _absolute count_ (say, Amp always prevented 10,000 colonies from growing, with respect to plating on NA).
+2. A **difference in relative count** (`CFU_NA_AMP`/`CFU_NA`): this would be appropriate if we believed that plating on NA/Amp prevented a consistent difference in _the proportion_ of colonies that would grow (e.g. if Amp always prevented 80% of colonies from growing, with respect to plating on NA)
+
+::: { .callout-challenge }
+Before reading on, which difference do you think is the more appropriate measurement, here?
+:::
+
+### Plausible mechanisms
+
+We can use what we know about the way the biological system behaves and the experiment performs to decide between these two options.
+
+::: { .callout-tip }
+The essential question we should ask is: does antimicrobial application reduce the 
+:::
+
+We assume that both farms have relatively stable bacterial populations across their fields and trafficked areas, although individual samples from a single farm might differ from each other (and we see this in our data in @tbl-dataset, where quite different numbers of bacteria are found in the NA plating for each sample from the same farm). We might also assume that some members of the bacterial community are susceptible, and some resistant, to Ampicillin. We are hypothesising that the farm that applies prophylactic antimicrobial treatments favours resistant strains by reducing the viability of susceptible strains in the soil, lowering both the _absolute count_ and _proportion_ of susceptible strains in the community.
+
+However, distinct sample sites are expected to support different sizes of bacterial community. Similarly, any particular site may have variable sizes of community and our sampling might be taken from a high- or low-population section of the site in any one case. This presents a problem for using _absolute count_, and suggests we should use the differences in _proportion_, instead.
+
+Looking at @tbl-dataset we can see that the observed CFU/mL of sample 1 from farm A changes from 3.4e6 on NA to 1.5e5 - an absolute difference of about 3mn CFU/mL. That difference is greater than the total counts for samples 2-6 (and many others). Just from that observation it doesn't seem reasonable that we should use a difference in absolute count.
+
+
+
+It seems less plausible that Amp would be able to prevent growth of a constant number of bacteria in a sample, and more plausible that it would prevent growth
+
+
