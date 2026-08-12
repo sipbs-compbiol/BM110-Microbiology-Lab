@@ -15,7 +15,7 @@ Farm B (Brookside Farm) uses intensive practices (often referred to as "factory 
 
 ## Sampling Design Details
 
-A surprising number of factors can influence the biological communities in soil (@Plassart2019-lq) so the two farms were chosen to be matched as closely as possible. We are interested only in the relative effects of wither using or not using prophylactic antibiotic treatments, such that we can assume there is no other [_confounding_](https://en.wikipedia.org/wiki/Confounding) influence on bacterial counts due to other factors such as:
+A surprising number of factors can influence the biological communities in soil (@Plassart2019-lq) so the two farms were chosen to be matched as closely as possible. We are interested only in the relative effects of whether using or not using prophylactic antibiotic treatments, such that we can assume there is no other [_confounding_](https://en.wikipedia.org/wiki/Confounding) influence on bacterial counts due to other factors such as:
 
 - Soil type
 - Land use
