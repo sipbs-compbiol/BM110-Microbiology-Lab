@@ -43,7 +43,17 @@ The $10^{-1}$ dilution contains **X** CFU/mL, but this is a 10-fold dilution of 
 ::: { .callout-important collapse=true title="Only if you really can't answer the question…"}
 Plating 100µL of the $10^{-1}$ dilution resulted in 37 CFU. That volume is 0.1mL so, if 1mL (ten times as much) had been plated out we would have expected to see ten times as many CFU: $10 \times 37 = 370$ CFU in one mL.
 
-The $10^{-1}$ dilution contains **X** CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we'd expect to see ten times the count of CFU in each mL of the original sample: $10 \times 370 = 3700 = 3,700 = 3.7 \times 10^3 = 3.7e3$ CFU/mL.
+The $10^{-1}$ dilution has 370 CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we'd expect to see ten times the count of CFU in each mL _of the original sample_, i.e. $10 \times 370 = 3700 = 3,700 = 3.7 \times 10^3 = 3.7e3$ CFU/mL.
+:::
+
+## Practice Question
+
+If you would like more practice calculating CFU/mL from this kind of data, you can use the question below.
+
+The `Reveal answers` button to show the answer if you're stuck, and the `Try another question` button will deliver a new question with randomly-chosen values.
+
+::: { .callout-note }
+You can use scientific notation (e.g. `6.25e5`), and you need to provide answers correct to three [significant figures](https://en.wikipedia.org/wiki/Significant_figures).
 :::
 
 <iframe src="https://numbas.mathcentre.ac.uk/question/210520/calculate-cfu-ml-given-a-decimal-dilution-and-colo/embed/" width="780" height="500"></iframe>
