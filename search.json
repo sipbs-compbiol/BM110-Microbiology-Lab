@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "BM110 Microbiology Laboratory: Statistical Support",
     "section": "",
-    "text": "Preface to the 2026-27 presentation\nWelcome to the 2026-27 edition of the statistics supporting information for the BM110 microbiology laboratory.\nWe would be very grateful to hear feedback about this workshop material by email or through the GitHub repository Issues page.",
+    "text": "Preface to the 2026-27 presentation\nWelcome to the 2026-27 edition of the statistics supporting information for the BM110 microbiology laboratory.\nWe would be very grateful to hear feedback about this material by email or through the GitHub repository Issues page.",
     "crumbs": [
       "Preface to the {{< var ay >}} presentation"
     ]
@@ -14,7 +14,7 @@
     "href": "index.html#overview",
     "title": "BM110 Microbiology Laboratory: Statistical Support",
     "section": "Overview",
-    "text": "Overview\nThese pages provide support and background to the statistical calculations you will be using in the BM110 microbiology laboratories.\nThe practical work aims to determine whether antimicrobial use in factory farming might contribute to spillover of antimicrobial resistance genes in the environment.\nTo test this hypothesis, that antimicrobial use on a farm results in greater occurrence of antimicrobial-resistant bacteria, a number of soil samples have been collected from two different farms, A and B (Figure 1). These two farms have differing practices, most specifically concerning their prophylactic use of antimicrobials.\n\n\n\n\n\n\nFigure 1: OS-style map showing the locations of the fictional farms providing the simulated data. (Figure generated using ChatGPT)\n\n\n\nIn the laboratory, you plated out (collectively) two serial dilutions (\\(10^{-1}\\) and \\(10^{-2}\\)) of bacteria from the two farm soil samples, and observed the number of colonies on each plate to obtain (again collectively) colony-forming unit (CFU) measurements for each of four conditions:\n\nFarm A, nutrient agar (NA)\nFarm A, nutrient agar + Ampicillin (Amp)\nFarm B, nutrient agar (NA)\nFarm B, nutrient agar + Ampicillin (Amp)\n\nThis allows us to test statistically whether there is quantitative support for the following hypotheses:\n\nDo we recover different counts of bacteria from farms A and B?\nDo we recover different counts of bacteria on nutrient agar + Ampicillin than on nutrient agar alone?\nDoes the difference or proportion in count between nutrient agar + Ampicillin, and nutrient agar differ between the two farms?\n\nThese pages will walk you through the relevant statistical analyses.",
+    "text": "Overview\nThese pages provide support and background to the statistical calculations you will be using in the BM110 microbiology laboratories.\nThe practical work aims to determine whether antimicrobial use in factory farming might contribute to spillover of antimicrobial resistance genes in the environment.\nTo test this hypothesis, that antimicrobial use on a farm results in greater occurrence of antimicrobial-resistant bacteria, a number of soil samples have been collected from two different farms, A and B (Figure 1). These two farms have differing practices, most specifically concerning their prophylactic use of antimicrobials.\n\n\n\n\n\n\nFigure 1: OS-style map showing the locations of the fictional farms providing the simulated data. (Figure generated using ChatGPT)\n\n\n\nIn the laboratory, you plated out (collectively) two serial dilutions (\\(10^{-1}\\) and \\(10^{-2}\\)) of bacteria from the two farm soil samples, and observed the number of colonies on each plate to obtain (again collectively) colony-forming unit (CFU) measurements for each of four conditions:\n\nFarm A, nutrient agar (NA)\nFarm A, nutrient agar + Ampicillin (Amp)\nFarm B, nutrient agar (NA)\nFarm B, nutrient agar + Ampicillin (Amp)\n\n\n\n\n\n\n\nTipThe aim of these pages\n\n\n\nBy collating the results from all of the laboratory groups, we can test statistically whether there is quantitative support for the hypothesis that samples from the farm that uses prophylactic antimicrobials have greater representation of antimicrobial-resistant bacteria.\nThese pages will walk you through the reasoning and application of the relevant statistical analyses, so you can incorporate statistical evidence into your decision-making.",
     "crumbs": [
       "Preface to the {{< var ay >}} presentation"
     ]
@@ -24,7 +24,7 @@
     "href": "scenario.html",
     "title": "The Scenario",
     "section": "",
-    "text": "Sampling Design Details\nYou have been asked to investigate whether the use of prophylactic antibiotics affects the distribution of antimicrobial-resitant bacteria in farm soils. The sampling for this experiment has been carried out at random sites on two neighbouring farms (Figure 1).\nA surprising number of factors can influence the biological communities in soil (Plassart et al. (2019)) so the two farms were chosen to be matched as closely as possible. We are interested only in the relative effects of wither using or not using prophylactic antibiotic treatments, such that we can assume there is no other confounding influence on bacterial counts due to other factors such as:\nHere, the two farms are neighbours, of similar size, and share the same soil type. They are equidistant from the local watercourse (Mill Brook), and farm the same combinations of crops and livestock breeds. The farmers are even related to each other.\nSoil samples were taken at random locations across each farm, representative of all fields and trafficked areas.",
+    "text": "Sampling Design Details\nYou have been asked to investigate whether the use of prophylactic antibiotics affects the distribution of antimicrobial-resitant bacteria in farm soils. The sampling for this experiment has been carried out at random sites on two neighbouring farms (Figure 1).\nA surprising number of factors can influence the biological communities in soil (Plassart et al. (2019)) so the two farms were chosen to be matched as closely as possible. We are interested only in the relative effects of whether using or not using prophylactic antibiotic treatments, such that we can assume there is no other confounding influence on bacterial counts due to other factors such as:\nHere, the two farms are neighbours, of similar size, and share the same soil type. They are equidistant from the local watercourse (Mill Brook), and farm the same combinations of crops and livestock breeds. The farmers are even related to each other. On both farms all fields and trafficked areas are used for livestock in a rotation system, and have been for decades.\nSoil samples were taken at random locations across each farm, representative of all fields and trafficked areas.",
     "crumbs": [
       "The Scenario"
     ]
@@ -40,30 +40,30 @@
     ]
   },
   {
-    "objectID": "data.html",
-    "href": "data.html",
+    "objectID": "cfus.html",
+    "href": "cfus.html",
     "title": "1  Counting CFUs",
     "section": "",
-    "text": "1.1 Calculating CFU/mL\nThe soil samples obtained from farms A and B were analysed by you and your colleagues in the BM110 Microbiology Laboratory. Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment as illustrated in Figure 1.1\nThe number counts of individual colonies on each plate were recorded in table 1 of the lab handbook (Figure 1.2).\nThe counts in Figure 1.2 allow us to calculate the number of colony-forming units (CFU) there were for each millilitre of the initial soil suspension. We will work through an example calculation below.",
+    "text": "1.1 Calculating CFU/mL\nThe soil samples obtained from farms A and B were analysed by you and your colleagues in the BM110 Microbiology Laboratory. Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment illustrated in Figure 1.1\nThe number counts of individual colonies on each plate were recorded in table 1 of the lab handbook (Figure 1.2).\nThe counts in Figure 1.2 allow us to calculate the number of colony-forming units (CFU) on each medium, for each millilitre of the initial soil suspension. We will work through an example calculation below.",
     "crumbs": [
       "The Scenario",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Counting CFUs</span>"
     ]
   },
   {
-    "objectID": "data.html#calculating-cfuml",
-    "href": "data.html#calculating-cfuml",
+    "objectID": "cfus.html#calculating-cfuml",
+    "href": "cfus.html#calculating-cfuml",
     "title": "1  Counting CFUs",
     "section": "",
-    "text": "TipCalculating CFU for the nutrient agar plate\n\n\n\nFor the nutrient agar (NA) plate, we saw in Figure 1.2 that there were too many colonies to count at the \\(10^{-1}\\) dilution, but that 192 colonies were counted at the \\(10^{-2}\\) dilution. This means that this plate had 192 colony-forming units (CFU).\nWe only plated 100µL of the \\(10^{-2}\\) dilution, so we know that there were 192 CFU in 100µL of the \\(10^{-2}\\) dilution. But we want to know how many CFU there were in 1mL.\nThere are 1000µL in 1mL, so 100µL is one tenth of 1mL. Therefore, we would expect there to be \\(1000/100 \\times 192 = 10 \\times 192 = 1920\\) CFU in 1mL of \\(10^{-2}\\) dilution.\nThe \\(10^{-2}\\) dilution has been diluted 100-fold (i.e. 100 times) compared to the original supernatant in the sample. So, we would expect 1mL of the original sample to have \\(100 \\times 1920 = 192000 = 192,000 = 1.92 \\times 10^5 = 1.92e5\\) CFU.\nWe therefore calculate the original supernatant to have \\(1.92 \\times 10^5\\) CFU/mL.\n\n\n\n\n\n\n\n\nCallout-challengeCHALLENGE: Calculate CFU for the nutrient agar/Ampicillin plate\n\n\n\nFrom Figure 1.2 we can see that the \\(10^{-1}\\) dilution gives a count of 37 CFU on the NA/Amp plate.\nWhat is the CFU/mL of the sample supernatant when grown on the NA/Amp plate?\n\n\n\n\n\n\n\n\nTipHint\n\n\n\n\n\nUse the example above for the NA plate as a guide.\n\n\n\n\n\n\n\n\n\nWarningIf you’re stuck\n\n\n\n\n\nWe plated 100µL of the \\(10^{-1}\\) dilution, and this resulted in 37 CFU. So how many CFU would there have been if 1mL had been plated out? Call this number X CFU/mL.\nThe \\(10^{-1}\\) dilution contains X CFU/mL, but this is a 10-fold dilution of the original sample supernatant. If the sample you plated was at the original concentration it would have had 10 times as many CFU/mL. This value is the answer you’re looking for.\n\n\n\n\n\n\n\n\n\nImportantOnly if you really can’t answer the question…\n\n\n\n\n\nPlating 100µL of the \\(10^{-1}\\) dilution resulted in 37 CFU. That volume is 0.1mL so, if 1mL (ten times as much) had been plated out we would have expected to see ten times as many CFU: \\(10 \\times 37 = 370\\) CFU in one mL.\nThe \\(10^{-1}\\) dilution has 370 CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we’d expect to see ten times the count of CFU in each mL of the original sample, i.e. \\(10 \\times 370 = 3700 = 3,700 = 3.7 \\times 10^3 = 3.7e3\\) CFU/mL.",
+    "text": "Caution\n\n\n\nThe count of viable bacteria depends on both the number of those bacteria in the sample, and on the growth conditions (including media choice).\nDifferent choices of medium, and different growth conditions, may result in quite different CFU/mL counts, possibly even of quite different bacteria!\n\n\n\n\n\n\n\n\nTipCalculating CFU for the nutrient agar plate\n\n\n\nFor the nutrient agar (NA) plate, we saw in Figure 1.2 that there were too many colonies to count at the \\(10^{-1}\\) dilution, but that 192 colonies were counted at the \\(10^{-2}\\) dilution. This means that this plate had 192 colony-forming units (CFU).\nWe only plated 100µL of the \\(10^{-2}\\) dilution, so this means that there were 192 CFU in 100µL of the \\(10^{-2}\\) dilution. But we want to know how many CFU there were in 1mL.\nThere are 1000µL in 1mL, so 100µL is one tenth of 1mL. Therefore, we would expect there to be:\n\\[\\begin{align*} \\frac{1000}{100} \\times 192 &= 10 \\times 192 \\\\\n&= 1920 \\,\\textrm{CFU}\n\\end{align*}\\]\nin 1mL of \\(10^{-2}\\) dilution.\nThe \\(10^{-2}\\) dilution has been diluted 100-fold (i.e. 100 times) with respect to the original supernatant of the sample. So this means we would expect 1mL of the original sample to have:\n\\[\\begin{align*}\n100 \\times 1920 &= 192000 \\\\\n&= 192,000  \\,\\textrm{CFU} \\\\\n&= 1.92 \\times 10^5  \\,\\textrm{CFU} \\\\\n&= 1.92e5 \\,\\textrm{CFU}\n\\end{align*}\\].\nWe therefore calculate the original supernatant to have \\(1.92 \\times 10^5\\) CFU/mL.\n\n\n\n\n\n\n\n\nCallout-challengeCHALLENGE: Calculate CFU for the nutrient agar/Ampicillin plate\n\n\n\nFrom Figure 1.2 we can see that the \\(10^{-1}\\) dilution gives a count of 37 CFU on the NA/Amp plate.\nWhat is the CFU/mL of the sample supernatant when grown on the NA/Amp plate?\n\n\n\n\n\n\n\n\nTipHint\n\n\n\n\n\nUse the example above for the NA plate as a guide.\n\n\n\n\n\n\n\n\n\nWarningIf you’re stuck\n\n\n\n\n\nWe plated 100µL of the \\(10^{-1}\\) dilution, and this resulted in 37 CFU. So how many CFU would there have been if 1mL had been plated out? Call this number X CFU/mL.\nThe \\(10^{-1}\\) dilution contains X CFU/mL, but this is a 10-fold dilution of the original sample supernatant. If the sample you plated was at the original concentration it would have had 10 times as many CFU/mL. This value is the answer you’re looking for.\n\n\n\n\n\n\n\n\n\nImportantOnly if you really can’t answer the question…\n\n\n\n\n\nPlating 100µL of the \\(10^{-1}\\) dilution resulted in 37 CFU. That volume is 0.1mL so, if 1mL (ten times as much) had been plated out we would have expected to see ten times as many CFU: \\(10 \\times 37 = 370\\) CFU in one mL.\nThe \\(10^{-1}\\) dilution has 370 CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we’d expect to see ten times the count of CFU in each mL of the original sample, i.e.  \\[\\begin{align*}10 \\times 370 &= 3700 \\\\\n&= 3,700 \\,\\textrm{CFU/mL} \\\\\n&= 3.7 \\times 10^3 \\,\\textrm{CFU/mL} \\\\\n&= 3.7e3 \\,\\textrm{CFU/mL}\n\\end{align*}\\]",
     "crumbs": [
       "The Scenario",
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Counting CFUs</span>"
     ]
   },
   {
-    "objectID": "data.html#practice-question",
-    "href": "data.html#practice-question",
+    "objectID": "cfus.html#practice-question",
+    "href": "cfus.html#practice-question",
     "title": "1  Counting CFUs",
     "section": "1.2 Practice Question",
     "text": "1.2 Practice Question\nIf you would like more practice calculating CFU/mL from this kind of data, you can use the question below.\nThe Reveal answers button to show the answer if you’re stuck, and the Try another question button will deliver a new question with randomly-chosen values.\n\n\n\n\n\n\nNote\n\n\n\nYou can use scientific notation (e.g. 6.25e5), and you need to provide answers correct to three significant figures.",
@@ -73,102 +73,146 @@
     ]
   },
   {
-    "objectID": "howto.html",
-    "href": "howto.html",
-    "title": "2  How do I…?",
+    "objectID": "data.html",
+    "href": "data.html",
+    "title": "\n2  Simulated Data\n",
     "section": "",
-    "text": "2.1 …create a new page?\nThis page is intended as a FAQ/HowTo for some common questions that might come up when using this template for the first time.\nSome example pages dedicated to common tasks and specific kinds of presentation are included later in the template.\nAssuming that you’re using RStudio, you need to create a new file to hold the Markdown for your page. I usually create a new text file (File -&gt; New File -&gt; Text File or click on the New File icon and select Text File). Write some content in the file and save it as a .qmd file with a meaningful filename (e.g. this file is called howto.qmd).\nAt this point, the file you just wrote could be rendered, but it won’t be linked as a page in the book. To link the file, open the _quarto.yml file and look for the section that starts:\nThen enter the name of your file in the appropriate place, e.g. in the early-section.qmd part, as a chapter following tutorial.qmd in the example below:\nand then render the file.",
+    "text": "2.1 Data structure\nWe simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in Table 2.1, and can be inspected in the file farm_scenario_1.tsv.\nThe data in Table 2.1 are structured in four columns.",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How do I…?</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Simulated Data</span>"
     ]
   },
   {
-    "objectID": "howto.html#create-a-new-page",
-    "href": "howto.html#create-a-new-page",
-    "title": "2  How do I…?",
+    "objectID": "data.html#data-structure",
+    "href": "data.html#data-structure",
+    "title": "\n2  Simulated Data\n",
     "section": "",
-    "text": "Tiptl;dr\n\n\n\n\nCreate a new plain text file\nWrite Markdown content in your file\nSave your file as a .qmd file (with an appropriate filename)\nAdd your filename to the _quarto.yml file in an appropriate place\nCommit your changes\nPush the changes to your repository\n\n\n\n\n\n# Define chapters and sections here\n  # [E] CHAPTERS AND SECTIONS\n  chapters:\n    - index.qmd\n    - intro.qmd\n\n    - part: early-section.qmd\n      chapters: \n        - tutorial.qmd\n        - howto.qmd      # new page added at this line\n\n\n\n\n\n\nWarning\n\n\n\nThe _quarto.yml file is written in a language called YAML (yet another markup language), and the syntax is important. If you follow the style of the file, you should be fine.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nTo ensure your changes are not lost, commit the changes to your repository (your .qmd file, the _quarto.yml file, and any supporting images or other files), and push them to GitHub.",
+    "text": "sample: this is a number indicating uniquely the identity of a sample that was taken from a named farm. Each sample was plated out onto NA and NA/Amp plates.\n\nfarm: this is the identifer of the farm from which the sample was taken1.\n\nCFU_NA: the calculated CFU/mL when plating the sample on an NA plate.\n\nCFU_NA_Amp: the calculated CFU/mL when plating the sample on an NA/Amp plate.\n\n\n\n\n\n\n\nTipHow to think about your data\n\n\n\nThe sample and farm columns are categorical variables called factors: discrete labels for the datapoints. They are also independent (or explanatory) variables in the sense that their values are static and do not depend on any other observations in the experiment.\nThe CFU_NA and CFU_NA_Amp columns are quantitative variables. Here we have rounded the calculations to give integer values so these are discrete variables. Because they are count data of physical things, they can only take on whole number positive values or zero. Both CFU_NA and CFU_NA_Amp are dependent variables because our understanding of the experiment and sampling is that their values vary on other observations or variables in the experimend: which sample is analysed, which farm it was sampled from, and which medium was used on the plate.\nBecause we have two measured CFU/mL values for each sample which differ due to the media used on the plate, we can consider these measurements to be paired data: there is an obvious and meaningful correspondence between the two values.",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How do I…?</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Simulated Data</span>"
     ]
   },
   {
-    "objectID": "howto.html#set-a-value-once-to-be-used-everywhere",
-    "href": "howto.html#set-a-value-once-to-be-used-everywhere",
-    "title": "2  How do I…?",
-    "section": "2.2 …set a value once to be used everywhere?",
-    "text": "2.2 …set a value once to be used everywhere?\nQuarto supports global variables, values that are defined once in a document, and that can be referred to at any point by using a special sequence of characters called a shortcode. The variables are defined in the _variables.yml file, using the YAML markup language.\n\n\n\n\n\n\nTip\n\n\n\nGlobal variables can be useful for defining details that might be repeated multiple times across your book:\n\nadministrative information, like contact emails and numbers\nthe academic year for a module presentation (saves searching for every mention in all pages)\n\n\n\nTo include the value held in a variable called myvar, you would define this in _variables.yml as:\nmyvar: \"The value of the variable\"\nand use the shortcode:\n{{&lt; var myvar &gt;}}\nVariables can be named directly, as with myvar above, but they can also be grouped by category as category.variable combinations. For instance, if you wanted to define a set of telephone numbers for three rooms HW312, HW313, and HW314, you could give these the category phone, defining them as, e.g.:\nphone:\n  HW312: 01-234-657890\n  HW313: 01-234-657891\n  HW313: 01-234-657892\nand use them with shortcode:\n{{&lt; var phone.HW313 &gt;}}\n\nAppearanceMarkdown_variables.yml\n\n\nThis is global_variable: This is an example of a global variable.\nThis is category.value1: This is an example of a category.value variable.\nThis is category.value2: This is another example of a category.value variable.\n\n\nThis is `global_variable`: {{&lt; var global_variable &gt;}}.\n\nThis is `category.value1`: {{&lt; var category.value1 &gt;}}.\n\nThis is `category.value2`: {{&lt; var category.value2 &gt;}}.\n\n\n# Example variables for the howto page\nglobal_variable: \"This is an example of a global variable\"\ncategory:\n  value1: \"This is an example of a `category.value` variable\"\n  value2: \"This is another example of a `category.value` variable\"",
+    "objectID": "data.html#data-visualisation",
+    "href": "data.html#data-visualisation",
+    "title": "\n2  Simulated Data\n",
+    "section": "\n2.2 Data visualisation",
+    "text": "2.2 Data visualisation\nIt is always useful to visualise a dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of any potential issues that may need to be accommodated in the analysis.\nIn Figure 2.1 we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed and visibly do not seem to meet the requirements of many statistical analyses (i.e. they are not normally-distributed/do not have normally-distributed residuals).\n\nClick to see the R code# We put the dataset into a more suitable form for plotting.\n# We use pivot_longer() to turn the data from wide to long format (preferable\n# for some data visualisation, analysis and processing).\n# We add a temporary column that labels data by combination of farm and plate,\n# to make visualisation easier.\ndfm_plot &lt;- dfm |&gt;\n  tidyr::pivot_longer(cols=c(\"CFU_NA\", \"CFU_NA_AMP\"), # go from wide to long\n                      names_to=\"plate\",\n                      values_to=\"cfu\") |&gt;\n  dplyr::mutate(farm_plate=interaction(farm, plate))  # add temporary column\n\n# Plot the data as the density distribution of the observed CFU/mL values for\n# each combination of farm and plate, with separate traces for each combination.\nggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,\n                                       colour=farm_plate)) +\n  ggridges::geom_density_ridges(fill=NA) +\n  ggplot2::labs(title=\"Distribution of total CFU/mL by farm/plate combination\",\n                y=\"Farm/Plate\", x=\"CFU/mL\") +\n  ggplot2::theme_minimal()\n\nPicking joint bandwidth of 1390000\n\n\n\n\n\n\n\nFigure 2.1: KDE ridgeplot of CFU/mL data distribution for each combination of farm and plate. The data are visibly right-skewed (i.e. they have heavy tails to the right/larger values) and do not look to meet assumptions of normal distributions, required for many statistical tests.\n\n\n\n\nThe CFU/mL data are, however, bacterial growth data and are typically logarithmic. It is natural to present bacterial growth data on a logarithmic axis, as in Figure 2.2, due to the nature of the underlying physical/biological process.\n\n\n\n\n\n\nNoteBacterial growth and logarithms\n\n\n\n\n\nConsider bacterial growth by cell division, starting from a single cell.\nInitially, at generation 0, there is one cell. After the first generation (cell division), there are two cells. In the second generation, each of these cells divides, resulting in four cells, and so on… Supposing that there are no deaths of any cells, the population after each generation is as shown below.\n\n\n\n\n generation \n    population \n  \n\n\n 1 \n    2 \n  \n\n 2 \n    4 \n  \n\n 3 \n    8 \n  \n\n 4 \n    16 \n  \n\n 5 \n    32 \n  \n\n 6 \n    64 \n  \n\n 7 \n    128 \n  \n\n 8 \n    256 \n  \n\n 9 \n    512 \n  \n\n 10 \n    1024 \n  \n\n\n\n\n\n\n\n\n\n\nAs you can probably see in the plot above, the relationship between the two values is that the population after any generation is 2 raised to the value of that generation. At generation 4 the population size is \\(2^4 = 16\\), and at generation 15, the population size would be \\(2^{15} = 32768\\). Graphs that look like this, with a steep swoop where the slope greatly increases for higher values of x, are typical of exponential growth (this kind of relationship is pretty common in nature!).\nIn mathematics, we operate on variables that are related in this way using exponents (i.e. raising numbers to a power), and logarithms (the power to which another number would have to be raised to obtain a candidate number). Powers and exponents are probably quite natural to you, and the calculations below quite obvious:\n\\[\\begin{align*}\n3^2 &= 3 \\times 3 = 9 \\\\\n4^3 &= 4 \\times 4 \\times 4 = 64\n\\end{align*}\\]\nBut the inverse operation, which asks questions like “to what power would we need to raise 2 to give the value 512?”, or “to what power would we need to raise 10 to give the value 1,000,000?” might not be as intuitive. This question is answered using logarithms.\nThe question “to what power would we need to raise 3 to get the value 9?” has the answer 2. We can say this as “The logarithm of 9 to base 3 is 2.” That is, to get the value 9 you would need to raise 3 to the power 2 (i.e. \\(3^2\\)). We write this in mathematical shorthand as \\(\\log_3(9) = 2\\), which can be read as “logarithm to base 3 of 9 is 2.”\nNOTE: you can think of this almost as exponentials being like multiplication, and logarithms being like division (the inverse of multiplication)\nIt is common to choose a value for the base that is appropriate for the physical or biological process being represented when performing calculations. It is possibly more common to see base 10 (\\(\\log_{10}\\)) used, for convenience in calculations.\nOne advantage of using logarithms for natural processes that are exponential, such as bacterial growth, is that taking the logarithm of (log-transforming) the data turns exponential relationships into linear relationships, as shown below. Note that we still get a linear relationship when we use \\(\\log_{10}\\), even though \\(\\log_{2}\\) might seem more appropriate in principle for bacterial growth, which doubles on each generation.\n\n\n\n\n generation \n    population \n    log_population \n  \n\n\n 1 \n    2 \n    0.30103 \n  \n\n 2 \n    4 \n    0.60206 \n  \n\n 3 \n    8 \n    0.90309 \n  \n\n 4 \n    16 \n    1.20412 \n  \n\n 5 \n    32 \n    1.50515 \n  \n\n 6 \n    64 \n    1.80618 \n  \n\n 7 \n    128 \n    2.10721 \n  \n\n 8 \n    256 \n    2.40824 \n  \n\n 9 \n    512 \n    2.70927 \n  \n\n 10 \n    1024 \n    3.01030 \n  \n\n\n\n\n\n\n\n\n\n\nLinear relationships are much easier to handle for statistical analyses, so log transformations of data are very common when analysing exponential processes.\n\n\n\n\nClick to see the R codeggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,\n                                       colour=farm_plate)) +\n  ggridges::geom_density_ridges(fill=NA) +\n  ggplot2::labs(title=\"Distribution of total CFU/mL by farm/plate combination\",\n                y=\"Farm/Plate\", x=\"CFU/mL\") +\n  ggplot2::theme_minimal() +\n  ggplot2::scale_x_log10()\n\nPicking joint bandwidth of 0.41\n\n\n\n\n\n\n\nFigure 2.2: KDE plots of data distribution for each combination of farm and plate, with a logarithmic x-axis.\n\n\n\n\nAlthough the KDE plots in Figure 2.2 are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (West (2022)), and is typical when working with bacterial growth data due to the underlying exponential nature of the process (see the expanding note above).",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How do I…?</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Simulated Data</span>"
+    ]
+  },
+  {
+    "objectID": "data.html#log-transformation",
+    "href": "data.html#log-transformation",
+    "title": "\n2  Simulated Data\n",
+    "section": "\n2.3 Log transformation",
+    "text": "2.3 Log transformation\nWhere it is appropriate, such as here, it is typical to take the log transformed values for statistical analysis, rather than just plot on a logarithmically-transformed axis. The transformed data is shown in Table 2.2, and is plotted on a standard x-axis in Figure 2.3.\n\nClick to see the R code# log-transform the observed CFU/mL for each sample\ndfm &lt;- dfm |&gt;\n  dplyr::mutate(log_CFU_NA = round(log10(CFU_NA), 4)) |&gt;\n  dplyr::mutate(log_CFU_NA_AMP = round(log10(CFU_NA_AMP), 4))\n\nDT::datatable(dfm)  # Display the table on the page\n\n\nTable 2.2: The data from Table 2.1 after log transformation\n\n\n\n\n\n\n\n\n\n\nClick to see the R code# Temporarily pivot the data from wide to long, for ease of use with ggplot2\ndfm_plot &lt;- dfm |&gt;\n  tidyr::pivot_longer(cols=c(\"log_CFU_NA\", \"log_CFU_NA_AMP\"),\n                      names_to=\"plate\",\n                      values_to=\"log_cfu\") |&gt;\n  dplyr::mutate(farm_plate=interaction(farm, plate))  # add farm/plate interaction categories\n\nggplot2::ggplot(dfm_plot, ggplot2::aes(x=log_cfu, y=farm_plate,\n                                       colour=farm_plate)) +\n  ggridges::geom_density_ridges(fill=NA) +\n  ggplot2::labs(title=\"Distribution of log10(CFU/mL) by farm/plate combination\",\n                y=\"Farm/Plate\", x=\"log10(CFU/mL)\") +\n  ggplot2::theme_minimal() +\n  ggplot2::scale_x_log10()\n\nPicking joint bandwidth of 0.0317\n\n\n\n\n\n\n\nFigure 2.3: KDE plots of log-transformed CFU/mL for each combination of farm and plate.\n\n\n\n\nThe plot in Figure 2.3 strongly resembles that in Figure 2.2 (other than the x-axis labels), because it is the same mathematical operation. We can now work directly with the log-transformed values in log_CFU_NA and log_CFU_NA_AMP, as they meet the assumptions of standard statistical tests more closely.\n\n\n\n\nWest, Robert M. 2022. “Best Practice in Statistics: The Use of Log Transformation.” Ann. Clin. Biochem. 59 (3): 162–65.",
+    "crumbs": [
+      "The Scenario",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Simulated Data</span>"
+    ]
+  },
+  {
+    "objectID": "data.html#footnotes",
+    "href": "data.html#footnotes",
+    "title": "\n2  Simulated Data\n",
+    "section": "",
+    "text": "In a blinded experiment, we may not know which farm a sample was taken from. Here, because we specifically want to compare results between farms, the identity of each farm is provided.↩︎",
+    "crumbs": [
+      "The Scenario",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Simulated Data</span>"
+    ]
+  },
+  {
+    "objectID": "statistics.html",
+    "href": "statistics.html",
+    "title": "3  Statistical Analysis",
+    "section": "",
+    "text": "3.1 Analysis design\nThis experiment is structured such that we expect a single explanatory variable to affect the observed values of CFU/mL: the farm from which the sample was taken. The farms have a single point of difference: the use, or non-use, of antibiotics on each farm, which affects the number of bacteria from the sample that can survive on the selective NA/Amp plate.\nWhat we are interested in is the reduction in viable count (CFU/mL) for each sample when plated on NA/Amp in contrast to plating on NA, and we need some way to represent this.",
+    "crumbs": [
+      "The Scenario",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Statistical Analysis</span>"
+    ]
+  },
+  {
+    "objectID": "statistics.html#analysis-design",
+    "href": "statistics.html#analysis-design",
+    "title": "3  Statistical Analysis",
+    "section": "",
+    "text": "Important\n\n\n\nWe expect that the total number of recoverable bacteria on the NA plate may vary from sample to sample, for the same farm. For example, some parts of the farm might be more bacteria-rich than others (we have simulated this in the data).\nFor any particular sample, we expect fewer bacteria to be recovered from the NA/Amp plate than the NA plate, because the antibiotic only allows a subset of the bacterial population to grow.\nSo, for a single sample, we expect the numbers of bacteria (as CFU/mL) recovered on the NA/Amp plate to be constrained by the number that are recoverable on the NA plate. We do not, for instance, expect to recover more CFU/mL from the NA/Amp plate than the NA plate for any sample. The two measurements are not independent of each other.\nOur choice of statistical analysis must take this non-independence into account.\n\n\n\n\n3.1.1 Two kinds of reduction in CFU/mL\nThere are two ways we can consider the difference between CFU/mL on the two media. These two approaches reflect distinct assumptions about how the biological system behaves. They are:\n\nA difference in absolute count (CFU_NA - CFU_NA_AMP): this would be appropriate if we believed that plating on NA/Amp induced a consistent difference in absolute count (say, Amp always prevented 10,000 colonies from growing, with respect to plating on NA).\nA difference in relative count (CFU_NA_AMP/CFU_NA): this would be appropriate if we believed that plating on NA/Amp prevented a consistent difference in the proportion of colonies that would grow (e.g. if Amp always prevented 80% of colonies from growing, with respect to plating on NA)\n\n\n\n\n\n\n\nCallout-challengeChallenge\n\n\n\nBefore reading on, which difference do you think is the more appropriate measurement, here?\n\n\n\n\n3.1.2 Plausible mechanisms\nWe can use what we know about the way the biological system behaves and the experiment performs to decide between these two options.\n\n\n\n\n\n\nTip\n\n\n\nThe essential question we should ask is: does antimicrobial application reduce the\n\n\nWe assume that both farms have relatively stable bacterial populations across their fields and trafficked areas, although individual samples from a single farm might differ from each other (and we see this in our data in Table 2.1, where quite different numbers of bacteria are found in the NA plating for each sample from the same farm). We might also assume that some members of the bacterial community are susceptible, and some resistant, to Ampicillin. We are hypothesising that the farm that applies prophylactic antimicrobial treatments favours resistant strains by reducing the viability of susceptible strains in the soil, lowering both the absolute count and proportion of susceptible strains in the community.\nHowever, distinct sample sites are expected to support different sizes of bacterial community. Similarly, any particular site may have variable sizes of community and our sampling might be taken from a high- or low-population section of the site in any one case. This presents a problem for using absolute count, and suggests we should use the differences in proportion, instead.\nLooking at Table 2.1 we can see that the observed CFU/mL of sample 1 from farm A changes from 3.4e6 on NA to 1.5e5 - an absolute difference of about 3mn CFU/mL. That difference is greater than the total counts for samples 2-6 (and many others). Just from that observation it doesn’t seem reasonable that we should use a difference in absolute count.\nIt seems less plausible that Amp would be able to prevent growth of a constant number of bacteria in a sample, and more plausible that it would prevent growth",
+    "crumbs": [
+      "The Scenario",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Statistical Analysis</span>"
     ]
   },
   {
     "objectID": "links.html",
     "href": "links.html",
-    "title": "3  Useful links",
+    "title": "4  Useful links",
     "section": "",
-    "text": "3.1 Quarto\nThis page provides links to online resources that may be useful when working with Quarto or this template.",
+    "text": "4.1 Quarto\nThis page provides links to online resources that may be useful when working with Quarto or this template.",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Useful links</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Useful links</span>"
     ]
   },
   {
     "objectID": "links.html#quarto",
     "href": "links.html#quarto",
-    "title": "3  Useful links",
+    "title": "4  Useful links",
     "section": "",
-    "text": "Quarto guide\nUsing R with Quarto\n\n\n3.1.1 Markdown\n\nQuarto Markdown basics\nkableExtra documentation\nRMarkdown cookbook",
+    "text": "Quarto guide\nUsing R with Quarto\n\n\n4.1.1 Markdown\n\nQuarto Markdown basics\nkableExtra documentation\nRMarkdown cookbook",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Useful links</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Useful links</span>"
     ]
   },
   {
     "objectID": "links.html#r",
     "href": "links.html#r",
-    "title": "3  Useful links",
-    "section": "3.2 R",
-    "text": "3.2 R\n\nProgramming with R (Carpentries)\nR for Reproducible Scientific Analysis (Carpentries)\n\n\n3.2.1 Data processing\n\nreadr documentation\ndplyr documentation\ntidyr documentation\nstringr documentation\nlubridate documentation\n\n\n\n3.2.2 Data Visualisation\n\nggplot2 documentation\nggally documentation\nggpubr documentation\n\n\n\n3.2.3 Shiny\n\nShiny documentation",
+    "title": "4  Useful links",
+    "section": "4.2 R",
+    "text": "4.2 R\n\nProgramming with R (Carpentries)\nR for Reproducible Scientific Analysis (Carpentries)\n\n\n4.2.1 Data processing\n\nreadr documentation\ndplyr documentation\ntidyr documentation\nstringr documentation\nlubridate documentation\n\n\n\n4.2.2 Data Visualisation\n\nggplot2 documentation\nggally documentation\nggpubr documentation\n\n\n\n4.2.3 Shiny\n\nShiny documentation",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Useful links</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Useful links</span>"
     ]
   },
   {
     "objectID": "links.html#rstudio",
     "href": "links.html#rstudio",
-    "title": "3  Useful links",
-    "section": "3.3 RStudio",
-    "text": "3.3 RStudio\n\nRStudio Getting Started\nRStudio tutorial (DataCamp)\nUsing git from RStudio (Carpentries)\n\n\n3.3.1 Shiny\n\nr-shinylive` documentation\nshinylive documentation\n\n\n\n3.3.2 WebR\n\nWebR documentation",
+    "title": "4  Useful links",
+    "section": "4.3 RStudio",
+    "text": "4.3 RStudio\n\nRStudio Getting Started\nRStudio tutorial (DataCamp)\nUsing git from RStudio (Carpentries)\n\n\n4.3.1 Shiny\n\nr-shinylive` documentation\nshinylive documentation\n\n\n\n4.3.2 WebR\n\nWebR documentation",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Useful links</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Useful links</span>"
     ]
   },
   {
     "objectID": "links.html#version-control-with-git-and-github",
     "href": "links.html#version-control-with-git-and-github",
-    "title": "3  Useful links",
-    "section": "3.4 Version Control with git and GitHub",
-    "text": "3.4 Version Control with git and GitHub\n\n3.4.1 git\n\nVersion control with git (Carpentries)\nAbout git (GitHub)\nUsing git with RStudio\n\n\n\n3.4.2 GitHub\n\nGetting started with GitHub\nCreating an account on GitHub\nUsing git/GitHub with R",
+    "title": "4  Useful links",
+    "section": "4.4 Version Control with git and GitHub",
+    "text": "4.4 Version Control with git and GitHub\n\n4.4.1 git\n\nVersion control with git (Carpentries)\nAbout git (GitHub)\nUsing git with RStudio\n\n\n\n4.4.2 GitHub\n\nGetting started with GitHub\nCreating an account on GitHub\nUsing git/GitHub with R",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Useful links</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Useful links</span>"
     ]
   },
   {
     "objectID": "links.html#cheatsheets",
     "href": "links.html#cheatsheets",
-    "title": "3  Useful links",
-    "section": "3.5 Cheatsheets",
-    "text": "3.5 Cheatsheets\n\nQuarto/RMarkdown cheatsheet\nreadr cheatsheet\ndplyr cheatsheet\ntidyr cheatsheet\nstringr cheatsheet\nlubridate cheatsheet\nggplot2 cheatsheet\nShiny cheatsheet\ngit cheatsheet\nGitHub cheatsheet",
+    "title": "4  Useful links",
+    "section": "4.5 Cheatsheets",
+    "text": "4.5 Cheatsheets\n\nQuarto/RMarkdown cheatsheet\nreadr cheatsheet\ndplyr cheatsheet\ntidyr cheatsheet\nstringr cheatsheet\nlubridate cheatsheet\nggplot2 cheatsheet\nShiny cheatsheet\ngit cheatsheet\nGitHub cheatsheet",
     "crumbs": [
       "The Scenario",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Useful links</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Useful links</span>"
     ]
   },
   {
@@ -184,144 +228,144 @@
   {
     "objectID": "callouts.html",
     "href": "callouts.html",
-    "title": "4  Custom Callouts",
+    "title": "5  Custom Callouts",
     "section": "",
-    "text": "4.1 Introduction\nThis page demonstrates the use of the quarto-custom-callout extension to provide bespoke callout blocks.\nQuarto provides a number of built-in callout blocks, including:\nbut these do not cover all the cases we might want to use callouts for. It is possible to change the titles of these callouts, such as:\nbut customising the colour and icon of a callout is more difficult. The quarto-custom-callout extension allows us to make our own callouts.",
+    "text": "5.1 Introduction\nThis page demonstrates the use of the quarto-custom-callout extension to provide bespoke callout blocks.\nQuarto provides a number of built-in callout blocks, including:\nbut these do not cover all the cases we might want to use callouts for. It is possible to change the titles of these callouts, such as:\nbut customising the colour and icon of a callout is more difficult. The quarto-custom-callout extension allows us to make our own callouts.",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Custom Callouts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Custom Callouts</span>"
     ]
   },
   {
     "objectID": "callouts.html#introduction",
     "href": "callouts.html#introduction",
-    "title": "4  Custom Callouts",
+    "title": "5  Custom Callouts",
     "section": "",
     "text": "Caution\n\n\n\nThe caution callout\n::: { .callout-caution }\nThe caution callout\n:::\n\n\n\n\n\n\n\n\nImportant\n\n\n\nThe important callout\n::: { .callout-info }\nThe important callout\n:::\n\n\n\n\n\n\n\n\nTip\n\n\n\nThe tip callout\n::: { .callout-tip }\nThe tip callout\n:::\n\n\n\n\n\n\n\n\n\nTipCustom title\n\n\n\nThe tip callout with a custom title\n::: { .callout-tip title=\"Custom title\"}\nThe tip callout with a custom title\n:::\n\n\n\n\n\n\n\n\nCautionNot the caution callout\n\n\n\n::: { .callout-caution }\n## Not the caution callout\n:::",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Custom Callouts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Custom Callouts</span>"
     ]
   },
   {
     "objectID": "callouts.html#defining-a-new-callout",
     "href": "callouts.html#defining-a-new-callout",
-    "title": "4  Custom Callouts",
-    "section": "4.2 Defining a new callout",
-    "text": "4.2 Defining a new callout\nTo make a new callout, add a new entry in _quarto.yml in the custom-callout block with the name of the callout. For instance, to add a new case study callout, we could use the code below:\ncustom-callout:\n  callout-case-study:\n    title: \"Case Study\"\n    icon-symbol: \"🔍\"\n    color: \"#FFA500\"\nand ensure that the custom-callout filter is called in _quarto.yml:\nfilters:\n  - custom-callout\n\n\n\n\n\n\nWarningCallout naming convention\n\n\n\nWe have chosen to give all of our callouts for this template the prefix callout- for continuity with the builtin callouts, and to aid with literate programming/self-documentation. Please keep to this convention when you define your own callouts.\n\n\n\n\n\n\n\n\nTip\n\n\n\nNotice that the icon-symbol field accepts unicode icons and emojis.",
+    "title": "5  Custom Callouts",
+    "section": "5.2 Defining a new callout",
+    "text": "5.2 Defining a new callout\nTo make a new callout, add a new entry in _quarto.yml in the custom-callout block with the name of the callout. For instance, to add a new case study callout, we could use the code below:\ncustom-callout:\n  callout-case-study:\n    title: \"Case Study\"\n    icon-symbol: \"🔍\"\n    color: \"#FFA500\"\nand ensure that the custom-callout filter is called in _quarto.yml:\nfilters:\n  - custom-callout\n\n\n\n\n\n\nWarningCallout naming convention\n\n\n\nWe have chosen to give all of our callouts for this template the prefix callout- for continuity with the builtin callouts, and to aid with literate programming/self-documentation. Please keep to this convention when you define your own callouts.\n\n\n\n\n\n\n\n\nTip\n\n\n\nNotice that the icon-symbol field accepts unicode icons and emojis.",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Custom Callouts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Custom Callouts</span>"
     ]
   },
   {
     "objectID": "callouts.html#custom-callouts-in-this-template",
     "href": "callouts.html#custom-callouts-in-this-template",
-    "title": "4  Custom Callouts",
-    "section": "4.3 Custom callouts in this template",
-    "text": "4.3 Custom callouts in this template\nWe have defined the custom callouts below:\n\n\n\n\n\n\nCallout-case-studyCase Study\n\n\n\nFor describing case studies\n::: { .callout-case-study }\nFor describing case studies\n:::\n\n\n\n\n\n\n\n\nCallout-challengeChallenge\n\n\n\nFor presenting a challenge to readers\n::: { .callout-challenge }\nFor presenting a challenge to readers\n:::\n\n\n\n\n\n\n\n\nCallout-dataData Analysis\n\n\n\nFor describing datasets and data analysis\n::: { .callout-data }\nFor describing datasets and data analysis\n:::\n\n\n\n\n\n\n\n\nCallout-discussionDiscussion Questions:\n\n\n\nFor introducing discussion points\n::: { .callout-discussion }\nFor introducing discussion points\n:::\n\n\n\n\n\n\n\n\nCallout-microbeMicrobe Profile\n\n\n\nFor summarising the properties of a microbe\n::: { .callout-microbe }\nFor summarising the properties of a microbe\n:::\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\nFor presenting a single question to readers\n::: { .callout-question }\nFor presenting a single question to readers\n:::\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\nFor presenting multiple questions to readers\n::: { .callout-questions }\nFor presenting multiple questions to readers\n:::\n\n\n\n\n\n\n\n\nCallout-thumbs-upGreat job!\n\n\n\nFor general encouragement\n::: { .callout-thumbs-up }\nFor general encouragement\n:::\n\n\n\n\n\n\n\n\nCallout-todoCallout-todo\n\n\n\nFor highlighting where we still need to do some work\n::: { .callout-todo }\nFor highlighting where we still need to do some work\n:::",
+    "title": "5  Custom Callouts",
+    "section": "5.3 Custom callouts in this template",
+    "text": "5.3 Custom callouts in this template\nWe have defined the custom callouts below:\n\n\n\n\n\n\nCallout-case-studyCase Study\n\n\n\nFor describing case studies\n::: { .callout-case-study }\nFor describing case studies\n:::\n\n\n\n\n\n\n\n\nCallout-challengeChallenge\n\n\n\nFor presenting a challenge to readers\n::: { .callout-challenge }\nFor presenting a challenge to readers\n:::\n\n\n\n\n\n\n\n\nCallout-dataData Analysis\n\n\n\nFor describing datasets and data analysis\n::: { .callout-data }\nFor describing datasets and data analysis\n:::\n\n\n\n\n\n\n\n\nCallout-discussionDiscussion Questions:\n\n\n\nFor introducing discussion points\n::: { .callout-discussion }\nFor introducing discussion points\n:::\n\n\n\n\n\n\n\n\nCallout-microbeMicrobe Profile\n\n\n\nFor summarising the properties of a microbe\n::: { .callout-microbe }\nFor summarising the properties of a microbe\n:::\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\nFor presenting a single question to readers\n::: { .callout-question }\nFor presenting a single question to readers\n:::\n\n\n\n\n\n\n\n\nCallout-questionsQuestions\n\n\n\nFor presenting multiple questions to readers\n::: { .callout-questions }\nFor presenting multiple questions to readers\n:::\n\n\n\n\n\n\n\n\nCallout-thumbs-upGreat job!\n\n\n\nFor general encouragement\n::: { .callout-thumbs-up }\nFor general encouragement\n:::\n\n\n\n\n\n\n\n\nCallout-todoCallout-todo\n\n\n\nFor highlighting where we still need to do some work\n::: { .callout-todo }\nFor highlighting where we still need to do some work\n:::",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Custom Callouts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Custom Callouts</span>"
     ]
   },
   {
     "objectID": "movies.html",
     "href": "movies.html",
-    "title": "5  Embedding video files",
+    "title": "6  Embedding video files",
     "section": "",
-    "text": "5.1 Embedding a video\nThis page demonstrates how to embed video into a Quarto webpage. This is a native capability of Quarto, and requires no extensions to be installed.\nTo embed a video, use the {{&lt; video &gt;}} shortcode. You can embed local files or URLs of online videos:",
+    "text": "6.1 Embedding a video\nThis page demonstrates how to embed video into a Quarto webpage. This is a native capability of Quarto, and requires no extensions to be installed.\nTo embed a video, use the {{&lt; video &gt;}} shortcode. You can embed local files or URLs of online videos:",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Embedding video files</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Embedding video files</span>"
     ]
   },
   {
     "objectID": "movies.html#embedding-a-video",
     "href": "movies.html#embedding-a-video",
-    "title": "5  Embedding video files",
+    "title": "6  Embedding video files",
     "section": "",
-    "text": "{{&lt; video local-video-file.mp4 &gt;}}\n\n{{&lt; video URL_TO_VIDEO &gt;}}\n\n5.1.1 Local file\n\n\n\n\n\n\nTip\n\n\n\nThis template provides an assets/videos folder, which can be used for adding video files to the repository.\n\n\n\nAppearanceMarkdown\n\n\n\n\n\n{{&lt; video assets/videos/template-tutorial-video-1a.mp4 &gt;}}\n\n\n\n\n\n5.1.2 Remote video file\n\nAppearanceMarkdown\n\n\n\n\n\n{{&lt; video https://youtu.be/dQw4w9WgXcQ?si=_BZIcKuz9U91pGqB &gt;}}\n\n\n\n\n\n5.1.3 Cross-referencing videos\nTo use cross-references with videos, wrap the video in a div using three colons, as in the example below. They can then be referenced using the usual @fig-label method.\n\nAppearanceMarkdown\n\n\n\n\n\n\n\n\nFigure 5.1: This is an example video with cross-referencing (and a legend!)\n\n\n\nAnd it’s cross-referenced like this (Figure 5.1).\n\n\n::: {#fig-example-1}\n\n{{&lt; video assets/videos/template-tutorial-video-1a.mp4 &gt;}}\n\nThis is an example video with cross-referencing (and a legend!)\n\n:::\n\nAnd it's cross-referenced like this (@fig-example-1).",
+    "text": "{{&lt; video local-video-file.mp4 &gt;}}\n\n{{&lt; video URL_TO_VIDEO &gt;}}\n\n6.1.1 Local file\n\n\n\n\n\n\nTip\n\n\n\nThis template provides an assets/videos folder, which can be used for adding video files to the repository.\n\n\n\nAppearanceMarkdown\n\n\n\n\n\n{{&lt; video assets/videos/template-tutorial-video-1a.mp4 &gt;}}\n\n\n\n\n\n6.1.2 Remote video file\n\nAppearanceMarkdown\n\n\n\n\n\n{{&lt; video https://youtu.be/dQw4w9WgXcQ?si=_BZIcKuz9U91pGqB &gt;}}\n\n\n\n\n\n6.1.3 Cross-referencing videos\nTo use cross-references with videos, wrap the video in a div using three colons, as in the example below. They can then be referenced using the usual @fig-label method.\n\nAppearanceMarkdown\n\n\n\n\n\n\n\n\nFigure 6.1: This is an example video with cross-referencing (and a legend!)\n\n\n\nAnd it’s cross-referenced like this (Figure 6.1).\n\n\n::: {#fig-example-1}\n\n{{&lt; video assets/videos/template-tutorial-video-1a.mp4 &gt;}}\n\nThis is an example video with cross-referencing (and a legend!)\n\n:::\n\nAnd it's cross-referenced like this (@fig-example-1).",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Embedding video files</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Embedding video files</span>"
     ]
   },
   {
     "objectID": "embedpdf.html",
     "href": "embedpdf.html",
-    "title": "6  Embedding PDF files",
+    "title": "7  Embedding PDF files",
     "section": "",
-    "text": "6.1 Native embedding\nThere are two ways to embed PDF files in a Quarto page: by using native Quarto support, or with the embedpdf extension.\nPDF files can be embedded in Quarto using the standard link syntax:",
+    "text": "7.1 Native embedding\nThere are two ways to embed PDF files in a Quarto page: by using native Quarto support, or with the embedpdf extension.\nPDF files can be embedded in Quarto using the standard link syntax:",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Embedding PDF files</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Embedding PDF files</span>"
     ]
   },
   {
     "objectID": "embedpdf.html#native-embedding",
     "href": "embedpdf.html#native-embedding",
-    "title": "6  Embedding PDF files",
+    "title": "7  Embedding PDF files",
     "section": "",
-    "text": "![An example PDF document](example.pdf)\n\nAppearanceCode\n\n\n\n\n\nKiepas et al. (2024)\n\n\n\n\n![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf)\n\n\n\n\n6.1.1 Controlling embedded document size\nTo set the height and width of the presentation of the embedded document, use brace notation:\n![An example PDF document](example.pdf){width=80% height=300px}\n\nAppearanceCode\n\n\n\n\n\nKiepas et al. (2024)\n\n\n\n\n![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf){width=100% height=300px}",
+    "text": "![An example PDF document](example.pdf)\n\nAppearanceCode\n\n\n\n\n\nKiepas et al. (2024)\n\n\n\n\n![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf)\n\n\n\n\n7.1.1 Controlling embedded document size\nTo set the height and width of the presentation of the embedded document, use brace notation:\n![An example PDF document](example.pdf){width=80% height=300px}\n\nAppearanceCode\n\n\n\n\n\nKiepas et al. (2024)\n\n\n\n\n![Kiepas _et al._ (2024)](assets/papers/kiepas_et_al_2024.pdf){width=100% height=300px}",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Embedding PDF files</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Embedding PDF files</span>"
     ]
   },
   {
     "objectID": "embedpdf.html#embedpdf",
     "href": "embedpdf.html#embedpdf",
-    "title": "6  Embedding PDF files",
-    "section": "6.2 embedpdf",
-    "text": "6.2 embedpdf\nembedpdf is a Quarto extension that enables embedding of PDF files directly into Quarto HTML files. The extension is included as part of this template.\n\nembedpdf repository\nembedpdf examples and documentation\n\nWith embedpdf, files are embedded using shortcodes, e.g.:\n{{&lt; pdf example.pdf &gt;}}\n\nAppearanceCode\n\n\nDownload PDF file.\n\n\n{{&lt; pdf assets/papers/kiepas_et_al_2024.pdf &gt;}}\n\n\n\n\n6.2.1 Controlling embedded document size\nTo set the height and width of the presentation of the embedded document, add these variables to the shortcode:\n{{&lt; pdf example.pdf height=200px width=80%&gt;}}\n\nAppearanceCode\n\n\nDownload PDF file.\n\n\n{{&lt; pdf assets/papers/kiepas_et_al_2024.pdf height=300px width=100% &gt;}}\n\n\n\n\n\n6.2.2 Installing embedpdf\nThe extension is packaged as part of this template, but if you do need to install embedpdf in other Quarto projects, use the command:\nquarto add jmgirard/embedpdf",
+    "title": "7  Embedding PDF files",
+    "section": "7.2 embedpdf",
+    "text": "7.2 embedpdf\nembedpdf is a Quarto extension that enables embedding of PDF files directly into Quarto HTML files. The extension is included as part of this template.\n\nembedpdf repository\nembedpdf examples and documentation\n\nWith embedpdf, files are embedded using shortcodes, e.g.:\n{{&lt; pdf example.pdf &gt;}}\n\nAppearanceCode\n\n\nDownload PDF file.\n\n\n{{&lt; pdf assets/papers/kiepas_et_al_2024.pdf &gt;}}\n\n\n\n\n7.2.1 Controlling embedded document size\nTo set the height and width of the presentation of the embedded document, add these variables to the shortcode:\n{{&lt; pdf example.pdf height=200px width=80%&gt;}}\n\nAppearanceCode\n\n\nDownload PDF file.\n\n\n{{&lt; pdf assets/papers/kiepas_et_al_2024.pdf height=300px width=100% &gt;}}\n\n\n\n\n\n7.2.2 Installing embedpdf\nThe extension is packaged as part of this template, but if you do need to install embedpdf in other Quarto projects, use the command:\nquarto add jmgirard/embedpdf",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Embedding PDF files</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Embedding PDF files</span>"
     ]
   },
   {
     "objectID": "quiz.html",
     "href": "quiz.html",
-    "title": "\n7  Interactive Multiple Choice Questions\n",
+    "title": "\n8  Interactive Multiple Choice Questions\n",
     "section": "",
-    "text": "7.1 Multiple Choice Questions\nThis page demonstrates the setup of an naquiz multiple-choice quiz. The advantage of this extension is that we don’t need to use a Shiny server.",
+    "text": "8.1 Multiple Choice Questions\nThis page demonstrates the setup of an naquiz multiple-choice quiz. The advantage of this extension is that we don’t need to use a Shiny server.",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Interactive Multiple Choice Questions</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Interactive Multiple Choice Questions</span>"
     ]
   },
   {
     "objectID": "quiz.html#multiple-choice-questions",
     "href": "quiz.html#multiple-choice-questions",
-    "title": "\n7  Interactive Multiple Choice Questions\n",
+    "title": "\n8  Interactive Multiple Choice Questions\n",
     "section": "",
-    "text": "7.1.1 Basic MCQ\nA simple naquiz example looks something like the question below to the reader (click the Markdown tab to see how to write the markdown for it).\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n::::\n:::::\n\n\n\n\n\n\nCaution\n\n\n\nThe nested colon dividers and their counts can look confusing on the page, and missed/extra colons can break the layout of your page.\n\nThe {.question} divider gets five colons.\nThe {.choices} divider that surrounds the choices presented to the reader gets four colons.\nEach individual {.choice} divider gets three colons.\n\n\n\n\n\n\nIt presents a series of radio buttons from which the reader can choose one option. On clicking the option, the reader receives very basic feedback: a red cross (incorrect) or green tick (correct).\n\n7.1.2 Add a “clear answer” button\nThe naquiz MCQs can be decorated with useful buttons for reader interaction. The example below has a “Clear Answer” button, which unchecks the reader’s selected answer.\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n:::::\n\n\n\n\n\n\nImportant\n\n\n\nThe button to clear reader answers needs to be linked with the available choices, and so is placed inside the {.choices} division of the MCQ.\n\n\n\n\n\n\n7.1.3 Add a “hint” button\nThe example below includes a “hint” button, which the reader can use to get a clue to the answer.\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nThe company name starts with an ‘M’…\n\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nThe company name starts with an 'M'...\n:::\n::::\n\n:::::\n\n\n\n\n\n\nImportant\n\n\n\nWe can place additional buttons within a button group divider, specified as ::::{.btn-group}, inside the question divider (the five colons :::::).\nHere, we have linked a {.button-hint} that, when clicked, expands to show the hint text.\n\n\n\n\n\n\n7.1.4 Add an “answer” button\nWe can add a further button to provide students with the answer we’d like them to read, directly.\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nThe company name starts with an ‘M’…\n\n\n\n\n\n\nShow Answer\n\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nThe company name starts with an 'M'...\n:::\n::::\n\n:::{.button-answer title=\"Show Answer\" button-class=\"btn btn-xs\"}\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n:::\n:::::\n\n\n\n\n\n\nImportant\n\n\n\nWe can place more than one button in the button group divider. Here, we have linked a {.button-answer} that, when clicked, expands to show the hint text.\n\n\n\n\n\n\n7.1.5 Placing an MCQ in a custom callout\nWe have created a custom callout called callout-question which can be used to make MCQ stand out a bit more, with a consistent visual style.\n\n\nAppearance\nMarkdown\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nThe company name starts with an ‘M’…\n\n\n\n\n\n\nShow Answer\n\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n\n\n\n\n\n\n\n\n\n::: { .callout-question }\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n:::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nThe company name starts with an 'M'...\n:::\n\n:::{.button-answer title=\"Show Answer\" button-class=\"btn btn-xs\"}\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n:::\n::::\n\n:::\n\n\n\n\n7.1.6 Randomising question values\nWe can use R or Python to generate random values that can be used to compose questions that are different each time the page is rendered, by inserting a suitable R/Python code block and using the values in the question.\n\n\n\n\n\n\nCaution\n\n\n\nThe values do not change when the page is reloaded by a reader. The values are calculated when the pages are rendered.\nFor values that change when the page is refreshed, or on demand, use an R Shiny or Shinylive solution, or a solution like Numbas.\n\n\n\n\nAppearance\nMarkdown\nR code\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nWhat is the sum of 2 and 19?\n\n\n\n\n\n✗-17\n\n\n\n✓21\n\n\n\n✗17\n\n\n\n✗38\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nYou need to add the two numbers 2 and 19\n\n\n\n\n\n\nShow Answer\n\n2 + 19 = 21\n\n\n\n\n\n\n\n\n\n::: { .callout-question }\n\n:::::{.question}\nWhat is the sum of `r x_val` and `r y_val`?\n\n::::{.choices}\n\n:::{.choice}\n`r x_val - y_val`\n:::  \n\n:::{.choice .correct-choice}\n`r x_val + y_val`\n:::\n\n:::{.choice}\n`r y_val - x_val`\n:::\n\n:::{.choice}\n`r y_val * x_val`\n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n:::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nYou need to add the two numbers `r x_val` and `r y_val`\n:::\n\n:::{.button-answer title=\"Show Answer\" button-class=\"btn btn-xs\"}\n`r x_val` + `r y_val` = `r x_val + y_val`\n:::\n::::\n\n:::\n\n\n#| show: false\n#| echo: false\n\nx_val &lt;- sample(1:10, 1)\ny_val &lt;- sample(11:20, 1)",
+    "text": "8.1.1 Basic MCQ\nA simple naquiz example looks something like the question below to the reader (click the Markdown tab to see how to write the markdown for it).\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n::::\n:::::\n\n\n\n\n\n\nCaution\n\n\n\nThe nested colon dividers and their counts can look confusing on the page, and missed/extra colons can break the layout of your page.\n\nThe {.question} divider gets five colons.\nThe {.choices} divider that surrounds the choices presented to the reader gets four colons.\nEach individual {.choice} divider gets three colons.\n\n\n\n\n\n\nIt presents a series of radio buttons from which the reader can choose one option. On clicking the option, the reader receives very basic feedback: a red cross (incorrect) or green tick (correct).\n\n8.1.2 Add a “clear answer” button\nThe naquiz MCQs can be decorated with useful buttons for reader interaction. The example below has a “Clear Answer” button, which unchecks the reader’s selected answer.\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n:::::\n\n\n\n\n\n\nImportant\n\n\n\nThe button to clear reader answers needs to be linked with the available choices, and so is placed inside the {.choices} division of the MCQ.\n\n\n\n\n\n\n8.1.3 Add a “hint” button\nThe example below includes a “hint” button, which the reader can use to get a clue to the answer.\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nThe company name starts with an ‘M’…\n\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nThe company name starts with an 'M'...\n:::\n::::\n\n:::::\n\n\n\n\n\n\nImportant\n\n\n\nWe can place additional buttons within a button group divider, specified as ::::{.btn-group}, inside the question divider (the five colons :::::).\nHere, we have linked a {.button-hint} that, when clicked, expands to show the hint text.\n\n\n\n\n\n\n8.1.4 Add an “answer” button\nWe can add a further button to provide students with the answer we’d like them to read, directly.\n\n\nAppearance\nMarkdown\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nThe company name starts with an ‘M’…\n\n\n\n\n\n\nShow Answer\n\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n\n\n\n\n\n\n\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nThe company name starts with an 'M'...\n:::\n::::\n\n:::{.button-answer title=\"Show Answer\" button-class=\"btn btn-xs\"}\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n:::\n:::::\n\n\n\n\n\n\nImportant\n\n\n\nWe can place more than one button in the button group divider. Here, we have linked a {.button-answer} that, when clicked, expands to show the hint text.\n\n\n\n\n\n\n8.1.5 Placing an MCQ in a custom callout\nWe have created a custom callout called callout-question which can be used to make MCQ stand out a bit more, with a consistent visual style.\n\n\nAppearance\nMarkdown\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nBill Gates was the founder of:\n\n\n\n\n\n✗Apple\n\n\n\n✓Microsoft\n\n\n\n✗Facebook\n\n\n\n✗Google\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nThe company name starts with an ‘M’…\n\n\n\n\n\n\nShow Answer\n\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n\n\n\n\n\n\n\n\n\n::: { .callout-question }\n\n:::::{.question}\nBill Gates was the founder of:\n\n::::{.choices}\n\n:::{.choice}\nApple\n:::  \n\n:::{.choice .correct-choice}\nMicrosoft\n:::\n\n:::{.choice}\nFacebook  \n:::\n\n:::{.choice}\nGoogle   \n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n:::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nThe company name starts with an 'M'...\n:::\n\n:::{.button-answer title=\"Show Answer\" button-class=\"btn btn-xs\"}\nBill Gates and Paul Allen founded Microsoft on April 4, 1975.\n:::\n::::\n\n:::\n\n\n\n\n8.1.6 Randomising question values\nWe can use R or Python to generate random values that can be used to compose questions that are different each time the page is rendered, by inserting a suitable R/Python code block and using the values in the question.\n\n\n\n\n\n\nCaution\n\n\n\nThe values do not change when the page is reloaded by a reader. The values are calculated when the pages are rendered.\nFor values that change when the page is refreshed, or on demand, use an R Shiny or Shinylive solution, or a solution like Numbas.\n\n\n\n\nAppearance\nMarkdown\nR code\n\n\n\n\n\n\n\n\n\nCallout-questionQuestion\n\n\n\n\nWhat is the sum of 2 and 16?\n\n\n\n\n\n✗-14\n\n\n\n✓18\n\n\n\n✗14\n\n\n\n✗32\n\n\nClear answer\n\n\n\n\n\n\n\n\n\n\n\nShow hint\n\nYou need to add the two numbers 2 and 16\n\n\n\n\n\n\nShow Answer\n\n2 + 16 = 18\n\n\n\n\n\n\n\n\n\n::: { .callout-question }\n\n:::::{.question}\nWhat is the sum of `r x_val` and `r y_val`?\n\n::::{.choices}\n\n:::{.choice}\n`r x_val - y_val`\n:::  \n\n:::{.choice .correct-choice}\n`r x_val + y_val`\n:::\n\n:::{.choice}\n`r y_val - x_val`\n:::\n\n:::{.choice}\n`r y_val * x_val`\n:::\n\n:::{.button-clear title=\"Clear answer\" button-class=\"btn btn-xs\"}\n:::\n\n::::\n:::::\n\n::::{.btn-group}\n:::{.button-hint title=\"Show hint\" button-class=\"btn btn-xs\"}\nYou need to add the two numbers `r x_val` and `r y_val`\n:::\n\n:::{.button-answer title=\"Show Answer\" button-class=\"btn btn-xs\"}\n`r x_val` + `r y_val` = `r x_val + y_val`\n:::\n::::\n\n:::\n\n\n#| show: false\n#| echo: false\n\nx_val &lt;- sample(1:10, 1)\ny_val &lt;- sample(11:20, 1)",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Interactive Multiple Choice Questions</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Interactive Multiple Choice Questions</span>"
     ]
   },
   {
     "objectID": "numbas.html",
     "href": "numbas.html",
-    "title": "8  Embedding Numbas Questions",
+    "title": "9  Embedding Numbas Questions",
     "section": "",
-    "text": "8.1 Embedding a Numbas question\nNumbas is an open-source e-assessment system aimed at mathematics and other numerate disciplines. It generates SCORM 2004-compliant, self-contained assessment packages, and can present randomised questions for practice and assessment.\nTo embed a Numbas question or exam, Run the question/exam from the Numbas editor, and click on the Share button. This will reveal a URL that can be embedded in your Quarto page.",
+    "text": "9.1 Embedding a Numbas question\nNumbas is an open-source e-assessment system aimed at mathematics and other numerate disciplines. It generates SCORM 2004-compliant, self-contained assessment packages, and can present randomised questions for practice and assessment.\nTo embed a Numbas question or exam, Run the question/exam from the Numbas editor, and click on the Share button. This will reveal a URL that can be embedded in your Quarto page.",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Embedding Numbas Questions</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Embedding Numbas Questions</span>"
     ]
   },
   {
     "objectID": "numbas.html#embedding-a-numbas-question",
     "href": "numbas.html#embedding-a-numbas-question",
-    "title": "8  Embedding Numbas Questions",
+    "title": "9  Embedding Numbas Questions",
     "section": "",
     "text": "AppearanceMarkdown\n\n\n\n\n\n&lt;iframe src=\"[URL]\" width=\"780\" height=\"500\"&gt;&lt;/iframe&gt;",
     "crumbs": [
       "Example pages",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Embedding Numbas Questions</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Embedding Numbas Questions</span>"
     ]
   },
   {
@@ -329,7 +373,7 @@
     "href": "references.html",
     "title": "References",
     "section": "",
-    "text": "Plassart, Pierre, Nicolas Chemidlin Prévost-Bouré, Stéphane Uroz, et al.\n2019. “Soil Parameters, Land Use, and Geographical Distance Drive\nSoil Bacterial Communities Along a European Transect.” Sci.\nRep. 9 (1): 605.",
+    "text": "Plassart, Pierre, Nicolas Chemidlin Prévost-Bouré, Stéphane Uroz, et al.\n2019. “Soil Parameters, Land Use, and Geographical Distance Drive\nSoil Bacterial Communities Along a European Transect.” Sci.\nRep. 9 (1): 605.\n\n\nWest, Robert M. 2022. “Best Practice in Statistics: The Use of Log\nTransformation.” Ann. Clin. Biochem. 59 (3): 162–65.",
     "crumbs": [
       "References"
     ]
