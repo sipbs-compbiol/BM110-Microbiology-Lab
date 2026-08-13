@@ -21,10 +21,8 @@ In the laboratory, you plated out (collectively) two serial dilutions ($10^{-1}$
 3. Farm B, nutrient agar (NA)
 4. Farm B, nutrient agar + Ampicillin (Amp)
 
-This allows us to test statistically whether there is quantitative support for the following hypotheses:
+::: { .callout-tip title="The aim of these pages" }
+By collating the results from all of the laboratory groups, we can test statistically whether there is quantitative support for the hypothesis that samples from the farm that uses prophylactic antimicrobials have greater representation of antimicrobial-resistant bacteria.
 
-1. Do we recover different counts of bacteria from farms A and B?
-2. Do we recover different counts of bacteria on nutrient agar + Ampicillin than on nutrient agar alone?
-3. Does the difference or proportion in count between nutrient agar + Ampicillin, and nutrient agar differ between the two farms?
-
-These pages will walk you through the relevant statistical analyses.
+These pages will walk you through the reasoning and application of the relevant statistical analyses, so you can incorporate statistical evidence into your decision-making.
+:::
