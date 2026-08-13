@@ -1,8 +1,8 @@
 # Counting CFUs
 
-The soil samples obtained from farms A and B were analysed by you and your colleagues in the [BM110 Microbiology Laboratory](https://classes.myplace.strath.ac.uk/course/view.php?id=21634&section=19). Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment as illustrated in @fig-culture-experiment
+The soil samples obtained from farms A and B were analysed by you and your colleagues in the [BM110 Microbiology Laboratory](https://classes.myplace.strath.ac.uk/course/view.php?id=21634&section=19). Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment illustrated in @fig-culture-experiment
 
-![Schematic of the BM110 microbiology laboratory experiment. Each soil sample was added to 10mL of sterile distilled water, vortex-mixed, and incubated. Serial dilutions (100µL in 900µL of sterile distilled water) were performed to obtain $10^{-1}$ and $10^{-2}$ dilutions. 100µL of each dilution was plated on nutrient agar, and nutrient agar plus Ampicillin, and incubated. The number of distinct colonies on each plate were counted.](images/culture_experiment.png){#fig-culture-experiment .lightbox width=80%}
+![Schematic representation of the BM110 microbiology laboratory experiment. A standard mass of each soil sample was added to 10mL of sterile distilled water, vortex-mixed, and incubated. Serial dilutions (100µL in 900µL of sterile distilled water) of the supernatant were performed to obtain $10^{-1}$ and $10^{-2}$ dilutions. 100µL of each dilution was plated on (i) nutrient agar, and (ii) nutrient agar plus Ampicillin, then incubated. After incubation, the number of distinct colonies on each plate were counted.](images/culture_experiment.png){#fig-culture-experiment .lightbox width=80%}
 
 The number counts of individual colonies on each plate were recorded in table 1 of the lab handbook (@fig-handbook-table).
 
@@ -10,16 +10,35 @@ The number counts of individual colonies on each plate were recorded in table 1 
 
 ## Calculating CFU/mL
 
-The counts in @fig-handbook-table allow us to calculate the number of [colony-forming units (CFU)](https://en.wikipedia.org/wiki/Colony-forming_unit) there were for each millilitre of the initial soil suspension. We will work through an example calculation below.
+The counts in @fig-handbook-table allow us to calculate the number of [colony-forming units (CFU)](https://en.wikipedia.org/wiki/Colony-forming_unit) on each medium, for each millilitre of the initial soil suspension. We will work through an example calculation below.
+
+::: { .callout-caution }
+The count of viable bacteria depends on both the number of those bacteria in the sample, and on the growth conditions (including media choice).
+
+Different choices of medium, and different growth conditions, may result in quite different CFU/mL counts, possibly even of quite different bacteria!
+:::
 
 ::: { .callout-tip title="Calculating CFU for the nutrient agar plate" }
 For the nutrient agar (NA) plate, we saw in @fig-handbook-table that there were too many colonies to count at the $10^{-1}$ dilution, but that 192 colonies were counted at the $10^{-2}$ dilution. This means that **this plate had 192 colony-forming units (CFU)**.
 
-We only plated 100µL of the $10^{-2}$ dilution, so we know that there were 192 CFU in 100µL of the $10^{-2}$ dilution. But we want to know how many CFU there were in 1mL.
+We only plated 100µL of the $10^{-2}$ dilution, so this means that there were 192 CFU in 100µL of the $10^{-2}$ dilution. But we want to know how many CFU there were in _1mL_.
 
-There are 1000µL in 1mL, so 100µL is one tenth of 1mL. Therefore, **we would expect there to be $1000/100 \times 192 = 10 \times 192 = 1920$ CFU in 1mL of $10^{-2}$ dilution**.
+There are 1000µL in 1mL, so 100µL is one tenth of 1mL. Therefore, **we would expect there to be:** 
 
-The $10^{-2}$ dilution has been diluted 100-fold (i.e. 100 times) compared to the original supernatant in the sample. So, **we would expect 1mL of the original sample to have $100 \times 1920 = 192000 = 192,000 = 1.92 \times 10^5 = 1.92e5$ CFU**.
+$$\begin{align*} \frac{1000}{100} \times 192 &= 10 \times 192 \\
+&= 1920 \,\textrm{CFU}
+\end{align*}$$ 
+
+**in 1mL of $10^{-2}$ dilution**.
+
+The $10^{-2}$ dilution has been diluted 100-fold (i.e. 100 times) with respect to the original supernatant of the sample. So this means **we would expect 1mL of the original sample to have:**
+
+$$\begin{align*}
+100 \times 1920 &= 192000 \\
+&= 192,000  \,\textrm{CFU} \\
+&= 1.92 \times 10^5  \,\textrm{CFU} \\
+&= 1.92e5 \,\textrm{CFU}
+\end{align*}$$.
 
 **We therefore calculate the original supernatant to have $1.92 \times 10^5$ CFU/mL.**
 :::
@@ -43,7 +62,12 @@ The $10^{-1}$ dilution contains **X** CFU/mL, but this is a 10-fold dilution of 
 ::: { .callout-important collapse=true title="Only if you really can't answer the question…"}
 Plating 100µL of the $10^{-1}$ dilution resulted in 37 CFU. That volume is 0.1mL so, if 1mL (ten times as much) had been plated out we would have expected to see ten times as many CFU: $10 \times 37 = 370$ CFU in one mL.
 
-The $10^{-1}$ dilution has 370 CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we'd expect to see ten times the count of CFU in each mL _of the original sample_, i.e. $10 \times 370 = 3700 = 3,700 = 3.7 \times 10^3 = 3.7e3$ CFU/mL.
+The $10^{-1}$ dilution has 370 CFU/mL, but is a 10-fold dilution of the original sample supernatant, so we'd expect to see ten times the count of CFU in each mL _of the original sample_, i.e. 
+$$\begin{align*}10 \times 370 &= 3700 \\
+&= 3,700 \,\textrm{CFU/mL} \\
+&= 3.7 \times 10^3 \,\textrm{CFU/mL} \\
+&= 3.7e3 \,\textrm{CFU/mL}
+\end{align*}$$
 :::
 
 ## Practice Question
