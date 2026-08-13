@@ -39,8 +39,8 @@ book:
 
     - part: scenario.qmd
       chapters: 
-        - cfus.qmd
         - experiment.qmd
+        - cfus.qmd
         - data.qmd
         - difference.qmd
         - statistics.qmd
