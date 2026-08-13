@@ -30,7 +30,7 @@ DT::datatable(dfm)  # Show the dataframe in this page
 The data in @tbl-dataset are structured in four columns.
 
 1. `sample`: this is a number indicating uniquely the identity of a sample that was taken from a named farm. Each sample was plated out onto NA and NA/Amp plates.
-2. `farm`: this is the identifer of the farm from which the sample was taken[^blinding].
+2. `farm`: this is the identifer of the farm from which the sample was taken.
 3. `CFU_NA`: the calculated CFU/mL when plating the sample on an NA plate.
 4. `CFU_NA_Amp`: the calculated CFU/mL when plating the sample on an NA/Amp plate.
 
@@ -73,9 +73,9 @@ ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
   ggplot2::theme_minimal()
 ```
 
-The CFU/mL data are, however, bacterial growth data and are typically logarithmic. It is natural to present bacterial growth data on a logarithmic axis, as in @fig-visualisation-2, due to the nature of the underlying physical/biological process.
+This odd appearance arises because the underlying biological process bacterial growth is an exponential mechanism. It is natural to present bacterial growth data on a logarithmic axis, as in @fig-visualisation-2, because of this.
 
-::: { .callout-note title="Bacterial growth and logarithms" collapse=true }
+::: { .callout-note title="Bacterial growth, exponentials and logarithms" collapse=true }
 Consider bacterial growth by cell division, starting from a single cell.
 
 Initially, at generation 0, there is one cell. After the first generation (cell division), there are two cells. In the second generation, each of these cells divides, resulting in four cells, and so on… Supposing that there are no deaths of any cells, the population after each generation is as shown below.
@@ -159,7 +159,7 @@ Although the KDE plots in @fig-visualisation-2 are not exact matches to normal d
 
 ## Log transformation
 
-Where it is appropriate, such as here, it is typical to take the log transformed values for statistical analysis, rather than just plot on a logarithmically-transformed axis. The transformed data is shown in @tbl-logtrans, and is plotted on a standard _x_-axis in @fig-visualisation-3.
+Where it is appropriate, it is possible to take the log transformed values for statistical analysis, rather than just plot on a logarithmically-transformed axis. Here transformed data is shown in @tbl-logtrans, and is plotted on a standard _x_-axis in @fig-visualisation-3.
 
 ```{r}
 #| label: tbl-logtrans
@@ -193,7 +193,5 @@ ggplot2::ggplot(dfm_plot, ggplot2::aes(x=log_cfu, y=farm_plate,
   ggplot2::scale_x_log10()
 ```
 
-The plot in @fig-visualisation-3 strongly resembles that in @fig-visualisation-2 (other than the _x_-axis labels), because it is the same mathematical operation. We can now work directly with the log-transformed values in `log_CFU_NA` and `log_CFU_NA_AMP`, as they meet the assumptions of standard statistical tests more closely.
-
-[^blinding]: In a _blinded_ experiment, we may not know which farm a sample was taken from. Here, because we specifically want to compare results between farms, the identity of each farm is provided.
+The plot in @fig-visualisation-3 strongly resembles that in @fig-visualisation-2 (other than the _x_-axis labels, and differences in smoothing due to the underlying data), because it is essentially the same mathematical operation. We can work directly with the log-transformed values in `log_CFU_NA` and `log_CFU_NA_AMP` if we choose, when they meet the assumptions of standard statistical tests more closely.
 
