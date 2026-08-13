@@ -46,14 +46,6 @@ book:
         - statistics.qmd
         - links.qmd
     
-    - part: example_pages.qmd
-      chapters:
-        - callouts.qmd
-        - movies.qmd
-        - embedpdf.qmd
-        - quiz.qmd
-        - numbas.qmd
-
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed
