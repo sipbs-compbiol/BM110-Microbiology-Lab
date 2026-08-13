@@ -12,7 +12,7 @@ This leads us to expect that, if we were to sample the bacterial communities fro
 In (bio)statistics we might express a hypothesis like the one above in a _formal_ manner as a _null_ hypothesis $H_0$ (which we seek to reject), and an _alternative_ hypothesis $H_1$ (which states the interpretation if we can't reject the null hypothesis). It is unusual to see this presentation in biological papers, but it can be useful to keep this in mind for the analysis:
 
 - $H_0$ (null hypothesis): There is _either_ (i) no difference between the proportions of antimicrobial-resistant bacteria in samples from farms A (no antibiotic use) and B (antimicrobial use), or (ii) the samples from farm A have a higher proportion of antimicrobial-resistant bacteria.
-- $H_1$ (null hypothesis): There samples from farm B have a higher proportion of antimicrobial-resistant bacteria.
+- $H_1$ (null hypothesis): The samples from farm B have a higher proportion of antimicrobial-resistant bacteria.
 :::
 
 ## The experiment
