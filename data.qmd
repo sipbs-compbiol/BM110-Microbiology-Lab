@@ -5,48 +5,65 @@ code-summary: Click to see the `R` code
 
 # Simulated Data
 
-We have simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, as though there are 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in @tbl-dataset, and can be inspected in the file [`farm_scenario_1.tsv`](assets/data/farm_scenario_1.tsv).
+We simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in @tbl-dataset, and can be inspected in the file [`farm_scenario_1.tsv`](assets/data/farm_scenario_1.tsv).
+
+::: { .callout-note }
+This data should look similar to the collated data from all of the groups in the laboratory.
+
+The values will be difference, but you should have columns with sample number, farm identifier, and CFU/mL for both the NA and NA/Amp plates for each sample.
+:::
 
 ```{r}
 #| label: tbl-dataset
 #| tbl-cap: Simulated experimental data for the BM110 microbiology laboratory experiment. There are 25 samples each from farms A and B, each plated on nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates to calculate CFU/mL values in the presence and absence of antibiotic selection. Columns indicate sample number, farm identifier, the CFU/mL obtained from the NA plate (`CFU_NA`), and the CFU/mL obtained from the NA/Amp plate (`CFU_NA_AMP`).
 
-# Read experiment data
+# Load experiment data from a tab-separated variable file into a dataframe
 dfm <- readr::read_tsv(file.path("assets", "data", "farm_scenario_1.tsv"),
                        col_types="ffdd")
 
-DT::datatable(dfm)
+DT::datatable(dfm)  # Show the dataframe in this page
 ```
 
 ## Data structure
 
 The data in @tbl-dataset are structured in four columns.
 
-1. `sample`: this is a number indicating the identity of a sample that was taken from a named farm. Each sample was plated out onto NA and NA/Amp plates.
+1. `sample`: this is a number indicating uniquely the identity of a sample that was taken from a named farm. Each sample was plated out onto NA and NA/Amp plates.
 2. `farm`: this is the identifer of the farm from which the sample was taken[^blinding].
-3. `CFU_NA`: the calculated CFU/mL when plating the sample on an NA plate
-4. `CFU_NA_Amp`: the calculated CFU/mL when plating the sample on an NA/Amp plate
+3. `CFU_NA`: the calculated CFU/mL when plating the sample on an NA plate.
+4. `CFU_NA_Amp`: the calculated CFU/mL when plating the sample on an NA/Amp plate.
 
-::: { .callout-note }
-The `sample` and `farm` columns are _factors_: discrete labels for the datapoints. They are [_independent (or explanatory) variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) in the sense that their values are static and do not depend on any other observations in the experiment.
+::: { .callout-tip title="How to think about your data" }
+The `sample` and `farm` columns are [_categorical variables_](https://en.wikipedia.org/wiki/Categorical_variable) called _factors_: discrete labels for the datapoints. They are also [_independent (or explanatory) variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) in the sense that their values are static and do not depend on any other observations in the experiment.
 
-The `CFU_NA` and `CFU_NA_Amp` columns are integer values, and are [_dependent variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) because we assume their value depends on the values taken by other variables in the experiment. Specifically, we assume that the recovered CFU/mL values we observe vary _depending_ on which sample is analysed, and which farm it was sampled from. The two values for each sample are [_paired data_](https://en.wikipedia.org/wiki/Paired_data).
+The `CFU_NA` and `CFU_NA_Amp` columns are [_quantitative variables_](https://en.wikipedia.org/wiki/Continuous_or_discrete_variable). Here we have rounded the calculations to give integer values so these are _discrete variables_. Because they are _count data_ of physical things, they can only take on whole number positive values or zero. Both `CFU_NA` and `CFU_NA_Amp` are [_dependent variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) because our understanding of the experiment and sampling is that their values vary on other observations or variables in the experimend: **which sample is analysed**, **which farm it was sampled from**, and **which medium was used on the plate**. 
+
+Because we have two measured CFU/mL values for each sample which differ due to the media used on the plate, we can consider these measurements to be [_paired data_](https://en.wikipedia.org/wiki/Paired_data): there is an obvious and meaningful correspondence between the two values.
 :::
 
 ## Data visualisation
 
-It is always useful to visualise a dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of potential issues for analysis. In @fig-visualisation-1 we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed and do not seem to meet the requirements of many statistical analyses (i.e. normally-distributed residuals).
+It is always useful to visualise a dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of any potential issues that may need to be accommodated in the analysis.
+
+In @fig-visualisation-1 we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed and visibly do not seem to meet the requirements of many statistical analyses (i.e. they are not normally-distributed/do not have normally-distributed residuals).
 
 ```{r warning=FALSE}
 #| label: fig-visualisation-1
-#| fig-cap: KDE plots of data distribution for each combination of farm and plate
+#| fig-cap: KDE [ridgeplot](https://en.wikipedia.org/wiki/Ridgeline_plot) of CFU/mL data distribution for each combination of farm and plate. The data are visibly right-skewed (i.e. they have heavy tails to the right/larger values) and do not look to meet assumptions of normal distributions, required for many statistical tests.
 
+# We put the dataset into a more suitable form for plotting.
+# We use pivot_longer() to turn the data from wide to long format (preferable
+# for some data visualisation, analysis and processing).
+# We add a temporary column that labels data by combination of farm and plate,
+# to make visualisation easier.
 dfm_plot <- dfm |>
-  tidyr::pivot_longer(cols=c("CFU_NA", "CFU_NA_AMP"),
+  tidyr::pivot_longer(cols=c("CFU_NA", "CFU_NA_AMP"), # go from wide to long
                       names_to="plate",
                       values_to="cfu") |>
-  dplyr::mutate(farm_plate=interaction(farm, plate))
+  dplyr::mutate(farm_plate=interaction(farm, plate))  # add temporary column
 
+# Plot the data as the density distribution of the observed CFU/mL values for
+# each combination of farm and plate, with separate traces for each combination.
 ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
                                        colour=farm_plate)) +
   ggridges::geom_density_ridges(fill=NA) +
@@ -55,7 +72,74 @@ ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
   ggplot2::theme_minimal()
 ```
 
-The CFU/mL data are, however, bacterial growth data and are typically logarithmic. It is natural to present such data on a logarithmic axis, as in @fig-visualisation-2.
+The CFU/mL data are, however, bacterial growth data and are typically logarithmic. It is natural to present bacterial growth data on a logarithmic axis, as in @fig-visualisation-2, due to the nature of the underlying physical/biological process.
+
+::: { .callout-note title="Bacterial growth and logarithms" collapse=true }
+Consider bacterial growth by cell division, starting from a single cell.
+
+Initially, at generation 0, there is one cell. After the first generation (cell division), there are two cells. In the second generation, each of these cells divides, resulting in four cells, and so on… Supposing that there are no deaths of any cells, the population after each generation is as shown below.
+
+```{r}
+#| echo: false
+
+gendfm <- data.frame(generation=1:10,
+                     population=2^(1:10))
+
+gendfm |>
+  kableExtra::kbl(table.attr = 'data-quarto-disable-processing="true"') |>
+  kableExtra::kable_styling(bootstrap_options=c("hover", "basic", "striped"),
+                            full_width=FALSE)
+
+doubling <- function(x){2^x}
+
+ggplot2::ggplot(gendfm, ggplot2::aes(x=generation, y=population)) +
+  ggplot2::geom_point() + 
+  ggplot2::stat_function(fun=doubling, colour="darkorange") +
+  ggplot2::annotate("text", colour="darkorange", x=6, y=240,
+                    label=latex2exp::TeX("$population = generation^2$")) +
+  ggplot2::theme_minimal()
+```
+
+As you can probably see in the plot above, the relationship between the two values is that the population after any generation is 2 raised to the value of that generation. At generation 4 the population size is $2^4 = 16$, and at generation 15, the population size would be $2^{15} = 32768$. Graphs that look like this, with a steep swoop where the slope greatly increases for higher values of _x_, are typical of [_exponential growth_](https://en.wikipedia.org/wiki/Exponential_growth) (this kind of relationship is pretty common in nature!). 
+
+In mathematics, we operate on variables that are related in this way using _exponents_ (i.e. raising numbers to a power), and [_logarithms_](https://en.wikipedia.org/wiki/Logarithm) (the power to which another number would have to be raised to obtain a candidate number). Powers and exponents are probably quite natural to you, and the calculations below quite obvious:
+
+$$\begin{align*}
+3^2 &= 3 \times 3 = 9 \\
+4^3 &= 4 \times 4 \times 4 = 64
+\end{align*}$$
+
+But the _inverse operation_, which asks questions like "to what power would we need to raise 2 to give the value 512?", or "to what power would we need to raise 10 to give the value 1,000,000?" might not be as intuitive. This question is answered using logarithms.
+
+The question "to what power would we need to raise 3 to get the value 9?" has the answer **2**. We can say this as "The logarithm of 9 to base 3 is 2." That is, to get the value 9 you would need to raise 3 to the power 2 (i.e. $3^2$). We write this in mathematical shorthand as $\log_3(9) = 2$, which can be read as "logarithm to base 3 of 9 is 2."
+
+**NOTE: you can think of this almost as _exponentials_ being like multiplication, and _logarithms_ being like division (the inverse of multiplication)**
+
+It is common to choose a value for the _base_ that is appropriate for the physical or biological process being represented when performing calculations. It is possibly more common to see base 10 ($\log_{10}$) used, for convenience in calculations.
+
+One advantage of using logarithms for natural processes that are exponential, such as bacterial growth, is that taking the logarithm of (_log-transforming_) the data turns exponential relationships into linear relationships, as shown below. Note that we still get a linear relationship when we use $\log_{10}$, even though $\log_{2}$ might seem more appropriate in principle for bacterial growth, which doubles on each generation.
+
+```{r echo=FALSE}
+gendfm <- gendfm |>
+  dplyr::mutate(log_population=log10(population))
+
+gendfm |>
+  kableExtra::kbl(table.attr = 'data-quarto-disable-processing="true"') |>
+  kableExtra::kable_styling(bootstrap_options=c("hover", "basic", "striped"),
+                            full_width=FALSE)
+
+log_doubling <- function(x){log10(2^x)}
+
+ggplot2::ggplot(gendfm, ggplot2::aes(x=generation, y=log_population)) +
+  ggplot2::geom_point() + 
+  ggplot2::stat_function(fun=log_doubling, colour="darkorange") +
+  ggplot2::annotate("text", colour="darkorange", x=6.75, y=1.4,
+                    label=latex2exp::TeX("$log\\_population = \\log_{10}(generation^2)$")) +
+  ggplot2::theme_minimal()
+```
+
+Linear relationships are much easier to handle for statistical analyses, so _log transformations_ of data are very common when analysing exponential processes.
+:::
 
 ```{r}
 #| label: fig-visualisation-2
@@ -70,7 +154,7 @@ ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
   ggplot2::scale_x_log10()
 ```
 
-Although the KDE plots in @fig-visualisation-2 are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (@West2022-wp), and is a typical action when working with bacterial growth data.
+Although the KDE plots in @fig-visualisation-2 are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (@West2022-wp), and is typical when working with bacterial growth data due to the underlying exponential nature of the process (see the expanding note above).
 
 ## Log transformation
 
@@ -85,18 +169,19 @@ dfm <- dfm |>
   dplyr::mutate(log_CFU_NA = round(log10(CFU_NA), 4)) |>
   dplyr::mutate(log_CFU_NA_AMP = round(log10(CFU_NA_AMP), 4))
 
-DT::datatable(dfm)
+DT::datatable(dfm)  # Display the table on the page
 ```
 
 ```{r}
 #| label: fig-visualisation-3
 #| fig-cap: KDE plots of log-transformed CFU/mL for each combination of farm and plate.
 
+# Temporarily pivot the data from wide to long, for ease of use with ggplot2
 dfm_plot <- dfm |>
   tidyr::pivot_longer(cols=c("log_CFU_NA", "log_CFU_NA_AMP"),
                       names_to="plate",
                       values_to="log_cfu") |>
-  dplyr::mutate(farm_plate=interaction(farm, plate))
+  dplyr::mutate(farm_plate=interaction(farm, plate))  # add farm/plate interaction categories
 
 ggplot2::ggplot(dfm_plot, ggplot2::aes(x=log_cfu, y=farm_plate,
                                        colour=farm_plate)) +

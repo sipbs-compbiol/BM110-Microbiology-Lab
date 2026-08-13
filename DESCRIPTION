@@ -13,6 +13,7 @@ Imports:
     ggridges,
     flextable,
     kableExtra,
+    latex2exp,
     shinylive,
     bslib,
     DT,
