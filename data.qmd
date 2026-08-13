@@ -1,6 +1,7 @@
 ---
 code-fold: true
 code-summary: Click to see the `R` code
+prefer-html: true
 ---
 
 # Simulated Data
