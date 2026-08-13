@@ -14,56 +14,66 @@
 #
 # In scenario 1, the CFU/mL for farms A and B have the same underlying
 # distribution.
-dfm <- data.frame(farm=as.factor(c(rep("A", 25), rep("B", 25))),
-                  NA_plate=c(rlnorm(25, meanlog=6*log(10), sdlog=1*log(10)),
+dfm1 <- data.frame(sample=1:50,
+                   farm=as.factor(c(rep("A", 25), rep("B", 25))),
+                   CFU_NA=c(rlnorm(25, meanlog=6*log(10), sdlog=1*log(10)),
                             rlnorm(25, meanlog=6*log(10), sdlog=1*log(10))),
-                  amr_frac=c(rnorm(25, mean=0.05, sd=0.01),
-                             rnorm(25, mean=0.3, sd=0.01))
-                  ) |>
-  dplyr::mutate(NA_Amp_plate = NA_plate * amr_frac) |>
-  tidyr::pivot_longer(cols=c("NA_plate", "NA_Amp_plate"),
+                   amr_frac=c(rnorm(25, mean=0.05, sd=0.01),
+                              rnorm(25, mean=0.3, sd=0.01))
+                   ) |>
+  dplyr::mutate(CFU_NA = round(CFU_NA)) |>
+  dplyr::mutate(CFU_NA_AMP = round(CFU_NA * amr_frac))
+readr::write_tsv(dfm1 |> dplyr::select(!amr_frac),
+                 file.path("assets", "data", "farm_scenario_1.tsv"))
+
+
+dfm1_plot <- dfm1 |>
+  tidyr::pivot_longer(cols=c("CFU_NA", "CFU_NA_AMP"),
                       names_to="plate",
                       values_to="cfu") |>
   dplyr::mutate(farm_plate=interaction(farm, plate))
   
 
-p1 <- ggplot2::ggplot(dfm, ggplot2::aes(x=farm_plate, y=cfu, colour=farm_plate)) +
+p1 <- ggplot2::ggplot(dfm1_plot, ggplot2::aes(x=farm_plate, y=cfu, colour=farm_plate)) +
   ggplot2::geom_boxplot(fill=NA) +
   ggplot2::geom_jitter(width=0.1) +
   ggplot2::scale_y_log10() +
   ggplot2::labs(title="Distribution of total CFU/mL by farm",
                 x="Farm/Plate", y="CFU/mL")
-ggplot2::ggsave("farm_scenario_1.png", p1)
+p1
+ggplot2::ggsave(file.path("assets", "data", "farm_scenario_1.png"), p1)
 
-readr::write_delim(dfm |> dplyr::select(farm, plate, cfu),
-                   file.path("..", "assets", "data", "farm_scenario_1.tsv"))
 
 # Scenario 2
 #
 # In scenario 2, the CFU/mL for farms A and B have differing underlying
 # distribution. Farm B has a notably lower CFU/mL overall.
-dfm2 <- data.frame(farm=as.factor(c(rep("A", 25), rep("B", 25))),
-                   NA_plate=c(rlnorm(25, meanlog=6*log(10), sdlog=1*log(10)),
-                              rlnorm(25, meanlog=5*log(10), sdlog=1*log(10))),
+dfm2 <- data.frame(sample=1:50,
+                   farm=as.factor(c(rep("A", 25), rep("B", 25))),
+                   CFU_NA=c(rlnorm(25, meanlog=4.8*log(10), sdlog=1*log(10)),
+                            rlnorm(25, meanlog=6.2*log(10), sdlog=1*log(10))),
                    amr_frac=c(rnorm(25, mean=0.05, sd=0.01),
                               rnorm(25, mean=0.3, sd=0.01))
 ) |>
-  dplyr::mutate(NA_Amp_plate = NA_plate * amr_frac) |>
-  tidyr::pivot_longer(cols=c("NA_plate", "NA_Amp_plate"),
+  dplyr::mutate(CFU_NA = round(CFU_NA)) |>
+  dplyr::mutate(CFU_NA_AMP = round(CFU_NA * amr_frac))
+readr::write_tsv(dfm1 |> dplyr::select(!amr_frac),
+                 file.path("assets", "data", "farm_scenario_2.tsv"))
+
+
+dfm2_plot <- dfm2 |>
+  tidyr::pivot_longer(cols=c("CFU_NA", "CFU_NA_AMP"),
                       names_to="plate",
                       values_to="cfu") |>
   dplyr::mutate(farm_plate=interaction(farm, plate))
 
 
-p2 <- ggplot2::ggplot(dfm2, ggplot2::aes(x=farm_plate, y=cfu, colour=farm_plate)) +
+p2 <- ggplot2::ggplot(dfm2_plot, ggplot2::aes(x=farm_plate, y=cfu, colour=farm_plate)) +
   ggplot2::geom_boxplot(fill=NA) +
   ggplot2::geom_jitter(width=0.1) +
   ggplot2::scale_y_log10() +
-  #ggplot2::facet_wrap(~plate) +
   ggplot2::labs(title="Distribution of total CFU/mL by farm",
                 x="Farm/Plate", y="CFU/mL")
 p2
-ggplot2::ggsave("farm_scenario_2.png", p2)
+ggplot2::ggsave(file.path("assets", "data", "farm_scenario_2.png"), p2)
 
-readr::write_delim(dfm |> dplyr::select(farm, plate, cfu),
-                   file.path("..", "assets", "data", "farm_scenario_2.tsv"))

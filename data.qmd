@@ -6,10 +6,10 @@ prefer-html: true
 
 # Simulated Data
 
-We simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in @tbl-dataset, and can be inspected in the file [`farm_scenario_1.tsv`](assets/data/farm_scenario_1.tsv).
+To provide a worked example for illustration, we have simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in @tbl-dataset, and can be inspected in the file [`farm_scenario_1.tsv`](assets/data/farm_scenario_1.tsv).
 
 ::: { .callout-note }
-The data in @tbl-dataset should look similar to the collated data from all of the groups in the laboratory.
+The data in @tbl-dataset should look similar to the collated data from all of the groups in the laboratory in the real lab experiment.
 
 The values will be different, but you should have columns with sample number, farm identifier, and CFU/mL for both the NA and NA/Amp plates for each sample.
 :::
@@ -34,7 +34,7 @@ The data in @tbl-dataset are structured in four columns.
 3. `CFU_NA`: the calculated CFU/mL when plating the sample on an NA plate.
 4. `CFU_NA_Amp`: the calculated CFU/mL when plating the sample on an NA/Amp plate.
 
-::: { .callout-tip title="How to think about your data" }
+::: { .callout-tip title="Different kinds of data" collapse="true" }
 The `sample` and `farm` columns are [_categorical variables_](https://en.wikipedia.org/wiki/Categorical_variable) called _factors_: discrete labels for the datapoints. They are also [_independent (or explanatory) variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) in the sense that their values are static and do not depend on any other observations in the experiment.
 
 The `CFU_NA` and `CFU_NA_Amp` columns are [_quantitative variables_](https://en.wikipedia.org/wiki/Continuous_or_discrete_variable). Here we have rounded the calculations to give integer values so these are _discrete variables_. Because they are _count data_ of physical things, they can only take on whole number positive values or zero. Both `CFU_NA` and `CFU_NA_Amp` are [_dependent variables_](https://en.wikipedia.org/wiki/Dependent_and_independent_variables) because our understanding of the experiment and sampling is that their values vary on other observations or variables in the experimend: **which sample is analysed**, **which farm it was sampled from**, and **which medium was used on the plate**. 
@@ -44,9 +44,9 @@ Because we have two measured CFU/mL values for each sample which differ due to t
 
 ## Data visualisation
 
-It is always useful to visualise a dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of any potential issues that may need to be accommodated in the analysis.
+It is always useful to visualise your dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of any potential issues that may need to be accommodated in the analysis.
 
-In @fig-visualisation-1 we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed and visibly do not seem to meet the requirements of many statistical analyses (i.e. they are not normally-distributed/do not have normally-distributed residuals).
+In @fig-visualisation-1 we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed. This means that, visibly, they do not seem to meet the assumptions and requirements of some statistical analyses (i.e. they are not normally-distributed/do not have normally-distributed residuals).
 
 ```{r warning=FALSE}
 #| label: fig-visualisation-1
@@ -70,7 +70,8 @@ ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
   ggridges::geom_density_ridges(fill=NA) +
   ggplot2::labs(title="Distribution of total CFU/mL by farm/plate combination",
                 y="Farm/Plate", x="CFU/mL") +
-  ggplot2::theme_minimal()
+  ggplot2::theme_minimal() +
+  ggplot2::theme(legend.position="none")
 ```
 
 This odd appearance arises because the underlying biological process bacterial growth is an exponential mechanism. It is natural to present bacterial growth data on a logarithmic axis, as in @fig-visualisation-2, because of this.
@@ -152,46 +153,26 @@ ggplot2::ggplot(dfm_plot, ggplot2::aes(x=cfu, y=farm_plate,
   ggplot2::labs(title="Distribution of total CFU/mL by farm/plate combination",
                 y="Farm/Plate", x="CFU/mL") +
   ggplot2::theme_minimal() +
-  ggplot2::scale_x_log10()
+  ggplot2::scale_x_log10() +
+  ggplot2::theme(legend.position="none")
 ```
 
 Although the KDE plots in @fig-visualisation-2 are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (@West2022-wp), and is typical when working with bacterial growth data due to the underlying exponential nature of the process (see the expanding note above).
 
-## Log transformation
-
-Where it is appropriate, it is possible to take the log transformed values for statistical analysis, rather than just plot on a logarithmically-transformed axis. Here transformed data is shown in @tbl-logtrans, and is plotted on a standard _x_-axis in @fig-visualisation-3.
-
-```{r}
-#| label: tbl-logtrans
-#| tbl-cap: The data from @tbl-dataset after log transformation
-
-# log-transform the observed CFU/mL for each sample
-dfm <- dfm |>
-  dplyr::mutate(log_CFU_NA = round(log10(CFU_NA), 4)) |>
-  dplyr::mutate(log_CFU_NA_AMP = round(log10(CFU_NA_AMP), 4))
-
-DT::datatable(dfm)  # Display the table on the page
-```
+It is more typical - and more helpful - to see bacterial counts represented as box-and-whisker plots, as in @fig-visualisation-3, with count on the _y_-axis and the different categories plotted side-by-side.
 
 ```{r}
 #| label: fig-visualisation-3
-#| fig-cap: KDE plots of log-transformed CFU/mL for each combination of farm and plate.
+#| fig-cap: Box-and-whisker plots of data distribution for each combination of farm and plate, with a logarithmic _y_-axis. The counts for the NA plates are higher than those for the NA/Amp plates, and it appears that the reduction in count is greater for farm A than for farm B.
 
-# Temporarily pivot the data from wide to long, for ease of use with ggplot2
-dfm_plot <- dfm |>
-  tidyr::pivot_longer(cols=c("log_CFU_NA", "log_CFU_NA_AMP"),
-                      names_to="plate",
-                      values_to="log_cfu") |>
-  dplyr::mutate(farm_plate=interaction(farm, plate))  # add farm/plate interaction categories
-
-ggplot2::ggplot(dfm_plot, ggplot2::aes(x=log_cfu, y=farm_plate,
+ggplot2::ggplot(dfm_plot, ggplot2::aes(y=cfu, x=farm_plate,
                                        colour=farm_plate)) +
-  ggridges::geom_density_ridges(fill=NA) +
-  ggplot2::labs(title="Distribution of log10(CFU/mL) by farm/plate combination",
-                y="Farm/Plate", x="log10(CFU/mL)") +
+  ggplot2::geom_boxplot() +
+  ggplot2::geom_jitter(width=0.1) +
+  ggplot2::labs(title="Distribution of total CFU/mL by farm/plate combination",
+                x="Farm/Plate", y="CFU/mL") +
   ggplot2::theme_minimal() +
-  ggplot2::scale_x_log10()
+  ggplot2::scale_y_log10() +
+  ggplot2::theme(legend.position="none")
 ```
-
-The plot in @fig-visualisation-3 strongly resembles that in @fig-visualisation-2 (other than the _x_-axis labels, and differences in smoothing due to the underlying data), because it is essentially the same mathematical operation. We can work directly with the log-transformed values in `log_CFU_NA` and `log_CFU_NA_AMP` if we choose, when they meet the assumptions of standard statistical tests more closely.
 

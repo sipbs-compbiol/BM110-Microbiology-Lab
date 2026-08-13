@@ -42,6 +42,7 @@ book:
         - cfus.qmd
         - experiment.qmd
         - data.qmd
+        - difference.qmd
         - statistics.qmd
         - links.qmd
     
