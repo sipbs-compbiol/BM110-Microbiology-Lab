@@ -44,8 +44,7 @@ book:
         - data.qmd
         - difference.qmd
         - statistics.qmd
-        - links.qmd
-    
+
     - references.qmd
 
 # Location of BibTeX format reference file; may not need to be changed
