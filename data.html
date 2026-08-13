@@ -5,7 +5,7 @@
 <meta name="generator" content="quarto-1.10.18">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Leighton Pritchard">
-<title>2&nbsp; Simulated Data – BM110 Microbiology Laboratory: Statistical Support</title>
+<title>3&nbsp; Simulated Data – BM110 Microbiology Laboratory: Statistical Support</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -87,7 +87,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./statistics.html" rel="next">
+<link href="./difference.html" rel="next">
 <link href="./cfus.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
@@ -133,37 +133,15 @@ div.csl-indent {
 <script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script><link href="site_libs/crosstalk-1.2.2/css/crosstalk.min.css" rel="stylesheet">
 <script src="site_libs/crosstalk-1.2.2/js/crosstalk.min.js"></script><script src="site_libs/kePrint-0.0.1/kePrint.js"></script><link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <style>
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
+div.callout-callout-data.callout {
+  border-left-color: #32CD32;
 }
-div.callout-callout-questions.callout-style-default .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
+div.callout-callout-data.callout-style-default .callout-header {
+  background-color: rgba(50, 205, 50, 0.13);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
-  background-image: none;
-}
-div.callout-callout-case-study.callout {
-  border-left-color: #FFA500;
-}
-div.callout-callout-case-study.callout-style-default .callout-header {
-  background-color: rgba(255, 165, 0, 0.13);
-}
-div.callout-callout-case-study .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-case-study.callout-style-default .callout-icon::before, div.callout-callout-case-study.callout-titled .callout-icon::before {
-  content: '🔍';
-  background-image: none;
-}
-div.callout-callout-microbe.callout {
-  border-left-color: #1E90FF;
-}
-div.callout-callout-microbe.callout-style-default .callout-header {
-  background-color: rgba(30, 144, 255, 0.13);
-}
-div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
-  content: '🧫';
+div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
+  content: '📊';
   background-image: none;
 }
 div.callout-callout-challenge.callout {
@@ -177,17 +155,6 @@ div.callout-callout-challenge.callout-style-default .callout-icon::before, div.c
   content: '🧑‍🏫';
   background-image: none;
 }
-div.callout-callout-data.callout {
-  border-left-color: #32CD32;
-}
-div.callout-callout-data.callout-style-default .callout-header {
-  background-color: rgba(50, 205, 50, 0.13);
-}
-div.callout-callout-data .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-data.callout-style-default .callout-icon::before, div.callout-callout-data.callout-titled .callout-icon::before {
-  content: '📊';
-  background-image: none;
-}
 div.callout-callout-discussion.callout {
   border-left-color: #BA55D3;
 }
@@ -199,15 +166,48 @@ div.callout-callout-discussion.callout-style-default .callout-icon::before, div.
   content: '✨';
   background-image: none;
 }
-div.callout-callout-todo.callout {
-  border-left-color: pink;
+div.callout-callout-microbe.callout {
+  border-left-color: #1E90FF;
 }
-div.callout-callout-todo.callout-style-default .callout-header {
-  background-color: rgb(from pink r g b / 13%);
+div.callout-callout-microbe.callout-style-default .callout-header {
+  background-color: rgba(30, 144, 255, 0.13);
 }
-div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
-  content: '📝';
+div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
+  content: '🧫';
+  background-image: none;
+}
+div.callout-callout-thumbs-up.callout {
+  border-left-color: #008000;
+}
+div.callout-callout-thumbs-up.callout-style-default .callout-header {
+  background-color: rgba(0, 128, 0, 0.13);
+}
+div.callout-callout-thumbs-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.callout-callout-thumbs-up.callout-titled .callout-icon::before {
+  content: '👍';
+  background-image: none;
+}
+div.callout-callout-case-study.callout {
+  border-left-color: #FFA500;
+}
+div.callout-callout-case-study.callout-style-default .callout-header {
+  background-color: rgba(255, 165, 0, 0.13);
+}
+div.callout-callout-case-study .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-case-study.callout-style-default .callout-icon::before, div.callout-callout-case-study.callout-titled .callout-icon::before {
+  content: '🔍';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-question.callout {
@@ -221,15 +221,15 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   content: '🙋';
   background-image: none;
 }
-div.callout-callout-thumbs-up.callout {
-  border-left-color: #008000;
+div.callout-callout-todo.callout {
+  border-left-color: pink;
 }
-div.callout-callout-thumbs-up.callout-style-default .callout-header {
-  background-color: rgba(0, 128, 0, 0.13);
+div.callout-callout-todo.callout-style-default .callout-header {
+  background-color: rgb(from pink r g b / 13%);
 }
-div.callout-callout-thumbs-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.callout-callout-thumbs-up.callout-titled .callout-icon::before {
-  content: '👍';
+div.callout-callout-todo .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-todo.callout-style-default .callout-icon::before, div.callout-callout-todo.callout-titled .callout-icon::before {
+  content: '📝';
   background-image: none;
 }
 </style>
@@ -267,7 +267,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./data.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulated Data</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./data.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulated Data</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -313,67 +313,32 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Experiment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./cfus.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulated Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulated Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./difference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Calculating the difference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./statistics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Statistical Analysis</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Useful links</span></span></a>
-  </div>
-</li>
-      </ul>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./example_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Example pages</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./callouts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Custom Callouts</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./movies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Embedding video files</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./embedpdf.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Embedding PDF files</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Multiple Choice Questions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./numbas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Statistical Analysis</span></span></a>
   </div>
 </li>
       </ul>
@@ -392,15 +357,14 @@ window.Quarto = {
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Table of contents</h2>
    
   <ul>
-<li><a href="#data-structure" id="toc-data-structure" class="nav-link active" data-scroll-target="#data-structure"><span class="header-section-number">2.1</span> Data structure</a></li>
-  <li><a href="#data-visualisation" id="toc-data-visualisation" class="nav-link" data-scroll-target="#data-visualisation"><span class="header-section-number">2.2</span> Data visualisation</a></li>
-  <li><a href="#log-transformation" id="toc-log-transformation" class="nav-link" data-scroll-target="#log-transformation"><span class="header-section-number">2.3</span> Log transformation</a></li>
+<li><a href="#data-structure" id="toc-data-structure" class="nav-link active" data-scroll-target="#data-structure"><span class="header-section-number">3.1</span> Data structure</a></li>
+  <li><a href="#data-visualisation" id="toc-data-visualisation" class="nav-link" data-scroll-target="#data-visualisation"><span class="header-section-number">3.2</span> Data visualisation</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM110-Microbiology-Lab/edit/main/data.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM110-Microbiology-Lab/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./data.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulated Data</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./data.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulated Data</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulated Data</span>
+<span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulated Data</span>
 </h1>
 </div>
 
@@ -415,7 +379,7 @@ window.Quarto = {
   
 
 
-</header><p>We simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in <a href="#tbl-dataset" class="quarto-xref">Table&nbsp;<span>2.1</span></a>, and can be inspected in the file <a href="assets/data/farm_scenario_1.tsv"><code>farm_scenario_1.tsv</code></a>.</p>
+</header><p>To provide a worked example for illustration, we have simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in <a href="statistics.html#tbl-dataset" class="quarto-xref">Table&nbsp;<span>5.1</span></a>, and can be inspected in the file <a href="assets/data/farm_scenario_1.tsv"><code>farm_scenario_1.tsv</code></a>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -426,7 +390,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The data in <a href="#tbl-dataset" class="quarto-xref">Table&nbsp;<span>2.1</span></a> should look similar to the collated data from all of the groups in the laboratory.</p>
+<p>The data in <a href="statistics.html#tbl-dataset" class="quarto-xref">Table&nbsp;<span>5.1</span></a> should look similar to the collated data from all of the groups in the laboratory in the real lab experiment.</p>
 <p>The values will be different, but you should have columns with sample number, farm identifier, and CFU/mL for both the NA and NA/Amp plates for each sample.</p>
 </div>
 </div>
@@ -438,48 +402,51 @@ Note
 <span><span class="fu">DT</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DT/man/datatable.html">datatable</a></span><span class="op">(</span><span class="va">dfm</span><span class="op">)</span>  <span class="co"># Show the dataframe in this page</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div id="tbl-dataset" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dataset-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.1: Simulated experimental data for the BM110 microbiology laboratory experiment. There are 25 samples each from farms A and B, each plated on nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates to calculate CFU/mL values in the presence and absence of antibiotic selection. Columns indicate sample number, farm identifier, the CFU/mL obtained from the NA plate (<code>CFU_NA</code>), and the CFU/mL obtained from the NA/Amp plate (<code>CFU_NA_AMP</code>).
+Table&nbsp;3.1: Simulated experimental data for the BM110 microbiology laboratory experiment. There are 25 samples each from farms A and B, each plated on nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates to calculate CFU/mL values in the presence and absence of antibiotic selection. Columns indicate sample number, farm identifier, the CFU/mL obtained from the NA plate (<code>CFU_NA</code>), and the CFU/mL obtained from the NA/Amp plate (<code>CFU_NA_AMP</code>).
 </figcaption><div aria-describedby="tbl-dataset-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-c964b8cfce18f6942133" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-c964b8cfce18f6942133">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B"],[3432477,2726922,334908,407523,746149,1650120,108146697,34080095,13559331,148643,86761,1396881,7702640,835155,838887,70382,129028573,375096,3728355,224320,10960836,1745057,3098287,556738,35207942,32905,287034,1265053,9279274,5050771,255909,2748589,252250,44255,7991931,350845,2544642,1384914,13659881,178303,98554,8256274,6478525,11550090,240388,26193554,652284,606308,500189,1624610],[154677,111606,21007,18564,30293,61194,6410270,1830032,534586,8011,3130,64079,475980,32149,49538,3932,6303167,20445,80265,7352,647096,91336,223231,25468,1768997,9162,87867,396609,2712383,1540350,77819,826444,69947,12963,2311343,107062,782746,422976,4054860,53204,28913,2597663,1888572,3367763,71608,7568448,206568,173937,148291,491614]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample<\/th>\n      <th>farm<\/th>\n      <th>CFU_NA<\/th>\n      <th>CFU_NA_AMP<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"sample","targets":1},{"name":"farm","targets":2},{"name":"CFU_NA","targets":3},{"name":"CFU_NA_AMP","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-4cbb2af52ac74737ed34" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-4cbb2af52ac74737ed34">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B"],[3432477,2726922,334908,407523,746149,1650120,108146697,34080095,13559331,148643,86761,1396881,7702640,835155,838887,70382,129028573,375096,3728355,224320,10960836,1745057,3098287,556738,35207942,32905,287034,1265053,9279274,5050771,255909,2748589,252250,44255,7991931,350845,2544642,1384914,13659881,178303,98554,8256274,6478525,11550090,240388,26193554,652284,606308,500189,1624610],[154677,111606,21007,18564,30293,61194,6410270,1830032,534586,8011,3130,64079,475980,32149,49538,3932,6303167,20445,80265,7352,647096,91336,223231,25468,1768997,9162,87867,396609,2712383,1540350,77819,826444,69947,12963,2311343,107062,782746,422976,4054860,53204,28913,2597663,1888572,3367763,71608,7568448,206568,173937,148291,491614]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample<\/th>\n      <th>farm<\/th>\n      <th>CFU_NA<\/th>\n      <th>CFU_NA_AMP<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[3,4]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"sample","targets":1},{"name":"farm","targets":2},{"name":"CFU_NA","targets":3},{"name":"CFU_NA_AMP","targets":4}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </figure>
 </div>
 </div>
-<section id="data-structure" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="data-structure">
-<span class="header-section-number">2.1</span> Data structure</h2>
-<p>The data in <a href="#tbl-dataset" class="quarto-xref">Table&nbsp;<span>2.1</span></a> are structured in four columns.</p>
+<section id="data-structure" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="data-structure">
+<span class="header-section-number">3.1</span> Data structure</h2>
+<p>The data in <a href="statistics.html#tbl-dataset" class="quarto-xref">Table&nbsp;<span>5.1</span></a> are structured in four columns.</p>
 <ol type="1">
 <li>
 <code>sample</code>: this is a number indicating uniquely the identity of a sample that was taken from a named farm. Each sample was plated out onto NA and NA/Amp plates.</li>
 <li>
-<code>farm</code>: this is the identifer of the farm from which the sample was taken<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</li>
+<code>farm</code>: this is the identifer of the farm from which the sample was taken.</li>
 <li>
 <code>CFU_NA</code>: the calculated CFU/mL when plating the sample on an NA plate.</li>
 <li>
 <code>CFU_NA_Amp</code>: the calculated CFU/mL when plating the sample on an NA/Amp plate.</li>
 </ol>
-<div class="callout callout-style-default callout-tip callout-titled" title="How to think about your data">
-<div class="callout-header d-flex align-content-center">
+<div class="callout callout-style-default callout-tip callout-titled" title="Different kinds of data">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Tip</span>How to think about your data
+<span class="screen-reader-only">Tip</span>Different kinds of data
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <code>sample</code> and <code>farm</code> columns are <a href="https://en.wikipedia.org/wiki/Categorical_variable"><em>categorical variables</em></a> called <em>factors</em>: discrete labels for the datapoints. They are also <a href="https://en.wikipedia.org/wiki/Dependent_and_independent_variables"><em>independent (or explanatory) variables</em></a> in the sense that their values are static and do not depend on any other observations in the experiment.</p>
 <p>The <code>CFU_NA</code> and <code>CFU_NA_Amp</code> columns are <a href="https://en.wikipedia.org/wiki/Continuous_or_discrete_variable"><em>quantitative variables</em></a>. Here we have rounded the calculations to give integer values so these are <em>discrete variables</em>. Because they are <em>count data</em> of physical things, they can only take on whole number positive values or zero. Both <code>CFU_NA</code> and <code>CFU_NA_Amp</code> are <a href="https://en.wikipedia.org/wiki/Dependent_and_independent_variables"><em>dependent variables</em></a> because our understanding of the experiment and sampling is that their values vary on other observations or variables in the experimend: <strong>which sample is analysed</strong>, <strong>which farm it was sampled from</strong>, and <strong>which medium was used on the plate</strong>.</p>
 <p>Because we have two measured CFU/mL values for each sample which differ due to the media used on the plate, we can consider these measurements to be <a href="https://en.wikipedia.org/wiki/Paired_data"><em>paired data</em></a>: there is an obvious and meaningful correspondence between the two values.</p>
 </div>
 </div>
-</section><section id="data-visualisation" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="data-visualisation">
-<span class="header-section-number">2.2</span> Data visualisation</h2>
-<p>It is always useful to visualise a dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of any potential issues that may need to be accommodated in the analysis.</p>
-<p>In <a href="#fig-visualisation-1" class="quarto-xref">Figure&nbsp;<span>2.1</span></a> we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed and visibly do not seem to meet the requirements of many statistical analyses (i.e.&nbsp;they are not normally-distributed/do not have normally-distributed residuals).</p>
+</div>
+</section><section id="data-visualisation" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="data-visualisation">
+<span class="header-section-number">3.2</span> Data visualisation</h2>
+<p>It is always useful to visualise your dataset prior to analysis. This can reveal relevant properties of the dataset, such as the underlying distribution of data and the presence of any potential issues that may need to be accommodated in the analysis.</p>
+<p>In <a href="difference.html#fig-visualisation-1" class="quarto-xref">Figure&nbsp;<span>4.1</span></a> we plot the KDE (kernel density estimation) distributions of the datasets, and see that the data look to be heavily right-skewed. This means that, visibly, they do not seem to meet the assumptions and requirements of some statistical analyses (i.e.&nbsp;they are not normally-distributed/do not have normally-distributed residuals).</p>
 <div class="cell">
 <details class="code-fold"><summary>Click to see the <code>R</code> code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># We put the dataset into a more suitable form for plotting.</span></span>
 <span><span class="co"># We use pivot_longer() to turn the data from wide to long format (preferable</span></span>
@@ -499,7 +466,8 @@ Table&nbsp;2.1: Simulated experimental data for the BM110 microbiology laborator
 <span>  <span class="fu">ggridges</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span>fill<span class="op">=</span><span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Distribution of total CFU/mL by farm/plate combination"</span>,</span>
 <span>                y<span class="op">=</span><span class="st">"Farm/Plate"</span>, x<span class="op">=</span><span class="st">"CFU/mL"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position<span class="op">=</span><span class="st">"none"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>Picking joint bandwidth of 1390000</code></pre>
 </div>
@@ -509,19 +477,19 @@ Table&nbsp;2.1: Simulated experimental data for the BM110 microbiology laborator
 <img src="data_files/figure-html/fig-visualisation-1-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visualisation-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.1: KDE <a href="https://en.wikipedia.org/wiki/Ridgeline_plot">ridgeplot</a> of CFU/mL data distribution for each combination of farm and plate. The data are visibly right-skewed (i.e.&nbsp;they have heavy tails to the right/larger values) and do not look to meet assumptions of normal distributions, required for many statistical tests.
+Figure&nbsp;3.1: KDE <a href="https://en.wikipedia.org/wiki/Ridgeline_plot">ridgeplot</a> of CFU/mL data distribution for each combination of farm and plate. The data are visibly right-skewed (i.e.&nbsp;they have heavy tails to the right/larger values) and do not look to meet assumptions of normal distributions, required for many statistical tests.
 </figcaption></figure>
 </div>
 </div>
 </div>
-<p>The CFU/mL data are, however, bacterial growth data and are typically logarithmic. It is natural to present bacterial growth data on a logarithmic axis, as in <a href="#fig-visualisation-2" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>, due to the nature of the underlying physical/biological process.</p>
-<div class="callout callout-style-default callout-note callout-titled" title="Bacterial growth and logarithms">
+<p>This odd appearance arises because the underlying biological process bacterial growth is an exponential mechanism. It is natural to present bacterial growth data on a logarithmic axis, as in <a href="difference.html#fig-visualisation-2" class="quarto-xref">Figure&nbsp;<span>4.2</span></a>, because of this.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Bacterial growth, exponentials and logarithms">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Bacterial growth and logarithms
+<span class="screen-reader-only">Note</span>Bacterial growth, exponentials and logarithms
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
@@ -678,7 +646,8 @@ Figure&nbsp;2.1: KDE <a href="https://en.wikipedia.org/wiki/Ridgeline_plot">ridg
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Distribution of total CFU/mL by farm/plate combination"</span>,</span>
 <span>                y<span class="op">=</span><span class="st">"Farm/Plate"</span>, x<span class="op">=</span><span class="st">"CFU/mL"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_log10</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_log10</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position<span class="op">=</span><span class="st">"none"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details><div class="cell-output cell-output-stderr">
 <pre><code>Picking joint bandwidth of 0.41</code></pre>
 </div>
@@ -688,64 +657,34 @@ Figure&nbsp;2.1: KDE <a href="https://en.wikipedia.org/wiki/Ridgeline_plot">ridg
 <img src="data_files/figure-html/fig-visualisation-2-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visualisation-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.2: KDE plots of data distribution for each combination of farm and plate, with a logarithmic <em>x</em>-axis.
+Figure&nbsp;3.2: KDE plots of data distribution for each combination of farm and plate, with a logarithmic <em>x</em>-axis.
 </figcaption></figure>
 </div>
 </div>
 </div>
-<p>Although the KDE plots in <a href="#fig-visualisation-2" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (<span class="citation" data-cites="West2022-wp">West (<a href="references.html#ref-West2022-wp" role="doc-biblioref">2022</a>)</span>), and is typical when working with bacterial growth data due to the underlying exponential nature of the process (see the expanding note above).</p>
-</section><section id="log-transformation" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="log-transformation">
-<span class="header-section-number">2.3</span> Log transformation</h2>
-<p>Where it is appropriate, such as here, it is typical to take the log transformed values for statistical analysis, rather than just plot on a logarithmically-transformed axis. The transformed data is shown in <a href="#tbl-logtrans" class="quarto-xref">Table&nbsp;<span>2.2</span></a>, and is plotted on a standard <em>x</em>-axis in <a href="#fig-visualisation-3" class="quarto-xref">Figure&nbsp;<span>2.3</span></a>.</p>
+<p>Although the KDE plots in <a href="difference.html#fig-visualisation-2" class="quarto-xref">Figure&nbsp;<span>4.2</span></a> are not exact matches to normal distributions, they are much more symmetrical. Log transformation is a common approach to treating skewed data (<span class="citation" data-cites="West2022-wp">West (<a href="references.html#ref-West2022-wp" role="doc-biblioref">2022</a>)</span>), and is typical when working with bacterial growth data due to the underlying exponential nature of the process (see the expanding note above).</p>
+<p>It is more typical - and more helpful - to see bacterial counts represented as box-and-whisker plots, as in <a href="#fig-visualisation-3" class="quarto-xref">Figure&nbsp;<span>3.3</span></a>, with count on the <em>y</em>-axis and the different categories plotted side-by-side.</p>
 <div class="cell">
-<details class="code-fold"><summary>Click to see the <code>R</code> code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># log-transform the observed CFU/mL for each sample</span></span>
-<span><span class="va">dfm</span> <span class="op">&lt;-</span> <span class="va">dfm</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>log_CFU_NA <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">CFU_NA</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>log_CFU_NA_AMP <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html">log10</a></span><span class="op">(</span><span class="va">CFU_NA_AMP</span><span class="op">)</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="fu">DT</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/DT/man/datatable.html">datatable</a></span><span class="op">(</span><span class="va">dfm</span><span class="op">)</span>  <span class="co"># Display the table on the page</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div id="tbl-logtrans" class="cell quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-logtrans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;2.2: The data from <a href="#tbl-dataset" class="quarto-xref">Table&nbsp;<span>2.1</span></a> after log transformation
-</figcaption><div aria-describedby="tbl-logtrans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<div class="datatables html-widget html-fill-item" id="htmlwidget-35eb15fcfce1964bc3bc" style="width:100%;height:auto;"></div>
-<script type="application/json" data-for="htmlwidget-35eb15fcfce1964bc3bc">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50"],["A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","A","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B","B"],[3432477,2726922,334908,407523,746149,1650120,108146697,34080095,13559331,148643,86761,1396881,7702640,835155,838887,70382,129028573,375096,3728355,224320,10960836,1745057,3098287,556738,35207942,32905,287034,1265053,9279274,5050771,255909,2748589,252250,44255,7991931,350845,2544642,1384914,13659881,178303,98554,8256274,6478525,11550090,240388,26193554,652284,606308,500189,1624610],[154677,111606,21007,18564,30293,61194,6410270,1830032,534586,8011,3130,64079,475980,32149,49538,3932,6303167,20445,80265,7352,647096,91336,223231,25468,1768997,9162,87867,396609,2712383,1540350,77819,826444,69947,12963,2311343,107062,782746,422976,4054860,53204,28913,2597663,1888572,3367763,71608,7568448,206568,173937,148291,491614],[6.5356,6.4357,5.5249,5.6102,5.8728,6.2175,8.034000000000001,7.5325,7.1322,5.1721,4.9383,6.1452,6.8866,5.9218,5.9237,4.8475,8.1107,5.5741,6.5715,5.3509,7.0398,6.2418,6.4911,5.7457,7.5466,4.5173,5.4579,6.1021,6.9675,6.7034,5.4081,6.4391,5.4018,4.646,6.9027,5.5451,6.4056,6.1414,7.1354,5.2512,4.9937,6.9168,6.8115,7.0626,5.3809,7.4182,5.8144,5.7827,5.6991,6.2107],[5.1894,5.0477,4.3224,4.2687,4.4813,4.7867,6.8069,6.2625,5.728,3.9037,3.4955,4.8067,5.6776,4.5072,4.6949,3.5946,6.7996,4.3106,4.9045,3.8664,5.811,4.9606,5.3488,4.406,6.2477,3.962,4.9438,5.5984,6.4334,6.1876,4.8911,5.9172,4.8448,4.1127,6.3639,5.0296,5.8936,5.6263,6.608,4.7259,4.4611,6.4146,6.2761,6.5273,4.855,6.879,5.3151,5.2404,5.1711,5.6916]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>sample<\/th>\n      <th>farm<\/th>\n      <th>CFU_NA<\/th>\n      <th>CFU_NA_AMP<\/th>\n      <th>log_CFU_NA<\/th>\n      <th>log_CFU_NA_AMP<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[3,4,5,6]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"sample","targets":1},{"name":"farm","targets":2},{"name":"CFU_NA","targets":3},{"name":"CFU_NA_AMP","targets":4},{"name":"log_CFU_NA","targets":5},{"name":"log_CFU_NA_AMP","targets":6}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
-</div>
-</div>
-</figure>
-</div>
-</div>
-<div class="cell">
-<details class="code-fold"><summary>Click to see the <code>R</code> code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Temporarily pivot the data from wide to long, for ease of use with ggplot2</span></span>
-<span><span class="va">dfm_plot</span> <span class="op">&lt;-</span> <span class="va">dfm</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">tidyr</span><span class="fu">::</span><span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"log_CFU_NA"</span>, <span class="st">"log_CFU_NA_AMP"</span><span class="op">)</span>,</span>
-<span>                      names_to<span class="op">=</span><span class="st">"plate"</span>,</span>
-<span>                      values_to<span class="op">=</span><span class="st">"log_cfu"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>farm_plate<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/interaction.html">interaction</a></span><span class="op">(</span><span class="va">farm</span>, <span class="va">plate</span><span class="op">)</span><span class="op">)</span>  <span class="co"># add farm/plate interaction categories</span></span>
-<span></span>
-<span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">dfm_plot</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">log_cfu</span>, y<span class="op">=</span><span class="va">farm_plate</span>,</span>
+<details class="code-fold"><summary>Click to see the <code>R</code> code</summary><div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">dfm_plot</span>, <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>y<span class="op">=</span><span class="va">cfu</span>, x<span class="op">=</span><span class="va">farm_plate</span>,</span>
 <span>                                       colour<span class="op">=</span><span class="va">farm_plate</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggridges</span><span class="fu">::</span><span class="fu"><a href="https://wilkelab.org/ggridges/reference/geom_density_ridges.html">geom_density_ridges</a></span><span class="op">(</span>fill<span class="op">=</span><span class="cn">NA</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Distribution of log10(CFU/mL) by farm/plate combination"</span>,</span>
-<span>                y<span class="op">=</span><span class="st">"Farm/Plate"</span>, x<span class="op">=</span><span class="st">"log10(CFU/mL)"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_boxplot.html">geom_boxplot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html">geom_jitter</a></span><span class="op">(</span>width<span class="op">=</span><span class="fl">0.1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title<span class="op">=</span><span class="st">"Distribution of total CFU/mL by farm/plate combination"</span>,</span>
+<span>                x<span class="op">=</span><span class="st">"Farm/Plate"</span>, y<span class="op">=</span><span class="st">"CFU/mL"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_x_log10</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</details><div class="cell-output cell-output-stderr">
-<pre><code>Picking joint bandwidth of 0.0317</code></pre>
-</div>
-<div class="cell-output-display">
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_continuous.html">scale_y_log10</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>legend.position<span class="op">=</span><span class="st">"none"</span><span class="op">)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details><div class="cell-output-display">
 <div id="fig-visualisation-3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-visualisation-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="data_files/figure-html/fig-visualisation-3-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-visualisation-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2.3: KDE plots of log-transformed CFU/mL for each combination of farm and plate.
+Figure&nbsp;3.3: Box-and-whisker plots of data distribution for each combination of farm and plate, with a logarithmic <em>y</em>-axis. The counts for the NA plates are higher than those for the NA/Amp plates, and it appears that the reduction in count is greater for farm A than for farm B.
 </figcaption></figure>
 </div>
 </div>
 </div>
-<p>The plot in <a href="#fig-visualisation-3" class="quarto-xref">Figure&nbsp;<span>2.3</span></a> strongly resembles that in <a href="#fig-visualisation-2" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> (other than the <em>x</em>-axis labels), because it is the same mathematical operation. We can now work directly with the log-transformed values in <code>log_CFU_NA</code> and <code>log_CFU_NA_AMP</code>, as they meet the assumptions of standard statistical tests more closely.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -753,10 +692,7 @@ Figure&nbsp;2.3: KDE plots of log-transformed CFU/mL for each combination of far
 West, Robert M. 2022. <span>“Best Practice in Statistics: The Use of Log Transformation.”</span> <em>Ann. Clin. Biochem.</em> 59 (3): 162–65.
 </div>
 </div>
-</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
-<ol>
-<li id="fn1"><p>In a <em>blinded</em> experiment, we may not know which farm a sample was taken from. Here, because we specifically want to compare results between farms, the identity of each farm is provided.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
     const anchorJS = new window.AnchorJS();
@@ -1157,12 +1093,12 @@ West, Robert M. 2022. <span>“Best Practice in Statistics: The Use of Log Trans
   });
   </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./cfus.html" class="pagination-link" aria-label="Counting CFUs">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./statistics.html" class="pagination-link" aria-label="Statistical Analysis">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Statistical Analysis</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./difference.html" class="pagination-link" aria-label="Calculating the difference">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Calculating the difference</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

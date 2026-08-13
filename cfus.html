@@ -8,7 +8,7 @@
 
 <meta name="author" content="Leighton Pritchard">
 
-<title>1&nbsp; Counting CFUs – BM110 Microbiology Laboratory: Statistical Support</title>
+<title>2&nbsp; Counting CFUs – BM110 Microbiology Laboratory: Statistical Support</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./data.html" rel="next">
-<link href="./scenario.html" rel="prev">
+<link href="./experiment.html" rel="prev">
 <link href="./icon_32.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -104,15 +104,15 @@ div.callout-callout-question.callout-style-default .callout-icon::before, div.ca
   content: '🙋';
   background-image: none;
 }
-div.callout-callout-questions.callout {
-  border-left-color: yellow;
+div.callout-callout-thumbs-up.callout {
+  border-left-color: #008000;
 }
-div.callout-callout-questions.callout-style-default .callout-header {
-  background-color: rgb(from yellow r g b / 13%);
+div.callout-callout-thumbs-up.callout-style-default .callout-header {
+  background-color: rgba(0, 128, 0, 0.13);
 }
-div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
-  content: '🙋️';
+div.callout-callout-thumbs-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.callout-callout-thumbs-up.callout-titled .callout-icon::before {
+  content: '👍';
   background-image: none;
 }
 div.callout-callout-data.callout {
@@ -126,15 +126,26 @@ div.callout-callout-data.callout-style-default .callout-icon::before, div.callou
   content: '📊';
   background-image: none;
 }
-div.callout-callout-thumbs-up.callout {
-  border-left-color: #008000;
+div.callout-callout-microbe.callout {
+  border-left-color: #1E90FF;
 }
-div.callout-callout-thumbs-up.callout-style-default .callout-header {
-  background-color: rgba(0, 128, 0, 0.13);
+div.callout-callout-microbe.callout-style-default .callout-header {
+  background-color: rgba(30, 144, 255, 0.13);
 }
-div.callout-callout-thumbs-up .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-thumbs-up.callout-style-default .callout-icon::before, div.callout-callout-thumbs-up.callout-titled .callout-icon::before {
-  content: '👍';
+div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
+  content: '🧫';
+  background-image: none;
+}
+div.callout-callout-questions.callout {
+  border-left-color: yellow;
+}
+div.callout-callout-questions.callout-style-default .callout-header {
+  background-color: rgb(from yellow r g b / 13%);
+}
+div.callout-callout-questions .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
+div.callout-callout-questions.callout-style-default .callout-icon::before, div.callout-callout-questions.callout-titled .callout-icon::before {
+  content: '🙋️';
   background-image: none;
 }
 div.callout-callout-todo.callout {
@@ -168,17 +179,6 @@ div.callout-callout-case-study.callout-style-default .callout-header {
 div.callout-callout-case-study .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
 div.callout-callout-case-study.callout-style-default .callout-icon::before, div.callout-callout-case-study.callout-titled .callout-icon::before {
   content: '🔍';
-  background-image: none;
-}
-div.callout-callout-microbe.callout {
-  border-left-color: #1E90FF;
-}
-div.callout-callout-microbe.callout-style-default .callout-header {
-  background-color: rgba(30, 144, 255, 0.13);
-}
-div.callout-callout-microbe .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');}
-div.callout-callout-microbe.callout-style-default .callout-icon::before, div.callout-callout-microbe.callout-titled .callout-icon::before {
-  content: '🧫';
   background-image: none;
 }
 </style>
@@ -224,7 +224,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./cfus.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./cfus.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Counting CFUs</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -274,67 +274,32 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./experiment.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Experiment</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./cfus.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Counting CFUs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./data.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulated Data</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulated Data</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./difference.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Calculating the difference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./statistics.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Statistical Analysis</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./links.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Useful links</span></span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="./example_pages.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Example pages</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./callouts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Custom Callouts</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./movies.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Embedding video files</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./embedpdf.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Embedding PDF files</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./quiz.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Interactive Multiple Choice Questions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./numbas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Embedding Numbas Questions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Statistical Analysis</span></span></a>
   </div>
 </li>
       </ul>
@@ -355,17 +320,17 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#calculating-cfuml" id="toc-calculating-cfuml" class="nav-link active" data-scroll-target="#calculating-cfuml"><span class="header-section-number">1.1</span> Calculating CFU/mL</a></li>
-  <li><a href="#practice-question" id="toc-practice-question" class="nav-link" data-scroll-target="#practice-question"><span class="header-section-number">1.2</span> Practice Question</a></li>
+  <li><a href="#calculating-cfuml" id="toc-calculating-cfuml" class="nav-link active" data-scroll-target="#calculating-cfuml"><span class="header-section-number">2.1</span> Calculating CFU/mL</a></li>
+  <li><a href="#practice-question" id="toc-practice-question" class="nav-link" data-scroll-target="#practice-question"><span class="header-section-number">2.2</span> Practice Question</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/sipbs-compbiol/BM110-Microbiology-Lab/edit/main/cfus.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sipbs-compbiol/BM110-Microbiology-Lab/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./cfus.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./scenario.html">The Scenario</a></li><li class="breadcrumb-item"><a href="./cfus.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Counting CFUs</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Counting CFUs</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Counting CFUs</span></h1>
 </div>
 
 
@@ -382,31 +347,31 @@ window.Quarto = {
 </header>
 
 
-<p>The soil samples obtained from farms A and B were analysed by you and your colleagues in the <a href="https://classes.myplace.strath.ac.uk/course/view.php?id=21634&amp;section=19">BM110 Microbiology Laboratory</a>. Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment illustrated in <a href="#fig-culture-experiment" class="quarto-xref">Figure&nbsp;<span>1.1</span></a></p>
+<p>The soil samples obtained from farms A and B were analysed by you and your colleagues in the <a href="https://classes.myplace.strath.ac.uk/course/view.php?id=21634&amp;section=19">BM110 Microbiology Laboratory</a>. Each of your groups was assigned a single soil sample, from which you generated serial dilutions according to the experiment illustrated in <a href="#fig-culture-experiment" class="quarto-xref">Figure&nbsp;<span>2.1</span></a></p>
 <div id="fig-culture-experiment" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-culture-experiment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/culture_experiment.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1.1: Schematic representation of the BM110 microbiology laboratory experiment. A standard mass of each soil sample was added to 10mL of sterile distilled water, vortex-mixed, and incubated. Serial dilutions (100µL in 900µL of sterile distilled water) of the supernatant were performed to obtain 10^{-1} and 10^{-2} dilutions. 100µL of each dilution was plated on (i) nutrient agar, and (ii) nutrient agar plus Ampicillin, then incubated. After incubation, the number of distinct colonies on each plate were counted."><img src="images/culture_experiment.png" class="img-fluid figure-img" style="width:80.0%"></a>
+<a href="images/culture_experiment.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;2.1: Schematic representation of the BM110 microbiology laboratory experiment. A standard mass of each soil sample was added to 10mL of sterile distilled water, vortex-mixed, and incubated. Serial dilutions (100µL in 900µL of sterile distilled water) of the supernatant were performed to obtain 10^{-1} and 10^{-2} dilutions. 100µL of each dilution was plated on (i) nutrient agar, and (ii) nutrient agar plus Ampicillin, then incubated. After incubation, the number of distinct colonies on each plate were counted."><img src="images/culture_experiment.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-culture-experiment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.1: Schematic representation of the BM110 microbiology laboratory experiment. A standard mass of each soil sample was added to 10mL of sterile distilled water, vortex-mixed, and incubated. Serial dilutions (100µL in 900µL of sterile distilled water) of the supernatant were performed to obtain <span class="math inline">\(10^{-1}\)</span> and <span class="math inline">\(10^{-2}\)</span> dilutions. 100µL of each dilution was plated on (i) nutrient agar, and (ii) nutrient agar plus Ampicillin, then incubated. After incubation, the number of distinct colonies on each plate were counted.
+Figure&nbsp;2.1: Schematic representation of the BM110 microbiology laboratory experiment. A standard mass of each soil sample was added to 10mL of sterile distilled water, vortex-mixed, and incubated. Serial dilutions (100µL in 900µL of sterile distilled water) of the supernatant were performed to obtain <span class="math inline">\(10^{-1}\)</span> and <span class="math inline">\(10^{-2}\)</span> dilutions. 100µL of each dilution was plated on (i) nutrient agar, and (ii) nutrient agar plus Ampicillin, then incubated. After incubation, the number of distinct colonies on each plate were counted.
 </figcaption>
 </figure>
 </div>
-<p>The number counts of individual colonies on each plate were recorded in table 1 of the lab handbook (<a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>1.2</span></a>).</p>
+<p>The number counts of individual colonies on each plate were recorded in table 1 of the lab handbook (<a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>2.2</span></a>).</p>
 <div id="fig-handbook-table" class="lightbox quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-handbook-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="images/labbook_table_numbers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;1.2: Example filled-in table 1 from the BM110 microbiology laboratory handbook (TNTC, too numerous to count; TFTC, too few to count). This gives us enough data to calculate CFU/mL for both the nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates."><img src="images/labbook_table_numbers.png" class="img-fluid figure-img" style="width:80.0%"></a>
+<a href="images/labbook_table_numbers.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Figure&nbsp;2.2: Example filled-in table 1 from the BM110 microbiology laboratory handbook (TNTC, too numerous to count; TFTC, too few to count). This gives us enough data to calculate CFU/mL for both the nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates."><img src="images/labbook_table_numbers.png" class="img-fluid figure-img" style="width:80.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-handbook-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1.2: Example filled-in table 1 from the BM110 microbiology laboratory handbook (TNTC, too numerous to count; TFTC, too few to count). This gives us enough data to calculate CFU/mL for both the nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates.
+Figure&nbsp;2.2: Example filled-in table 1 from the BM110 microbiology laboratory handbook (TNTC, too numerous to count; TFTC, too few to count). This gives us enough data to calculate CFU/mL for both the nutrient agar (NA) and nutrient agar plus Ampicillin (NA/Amp) plates.
 </figcaption>
 </figure>
 </div>
-<section id="calculating-cfuml" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="calculating-cfuml"><span class="header-section-number">1.1</span> Calculating CFU/mL</h2>
-<p>The counts in <a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> allow us to calculate the number of <a href="https://en.wikipedia.org/wiki/Colony-forming_unit">colony-forming units (CFU)</a> on each medium, for each millilitre of the initial soil suspension. We will work through an example calculation below.</p>
+<section id="calculating-cfuml" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="calculating-cfuml"><span class="header-section-number">2.1</span> Calculating CFU/mL</h2>
+<p>The counts in <a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> allow us to calculate the number of <a href="https://en.wikipedia.org/wiki/Colony-forming_unit">colony-forming units (CFU)</a> on each medium, for each millilitre of the initial soil suspension. We will work through an example calculation below.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -431,7 +396,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>For the nutrient agar (NA) plate, we saw in <a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> that there were too many colonies to count at the <span class="math inline">\(10^{-1}\)</span> dilution, but that 192 colonies were counted at the <span class="math inline">\(10^{-2}\)</span> dilution. This means that <strong>this plate had 192 colony-forming units (CFU)</strong>.</p>
+<p>For the nutrient agar (NA) plate, we saw in <a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> that there were too many colonies to count at the <span class="math inline">\(10^{-1}\)</span> dilution, but that 192 colonies were counted at the <span class="math inline">\(10^{-2}\)</span> dilution. This means that <strong>this plate had 192 colony-forming units (CFU)</strong>.</p>
 <p>We only plated 100µL of the <span class="math inline">\(10^{-2}\)</span> dilution, so this means that there were 192 CFU in 100µL of the <span class="math inline">\(10^{-2}\)</span> dilution. But we want to know how many CFU there were in <em>1mL</em>.</p>
 <p>There are 1000µL in 1mL, so 100µL is one tenth of 1mL. Therefore, <strong>we would expect there to be:</strong></p>
 <p><span class="math display">\[\begin{align*} \frac{1000}{100} \times 192 &amp;= 10 \times 192 \\
@@ -458,7 +423,7 @@ Caution
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>From <a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>1.2</span></a> we can see that the <span class="math inline">\(10^{-1}\)</span> dilution gives a count of 37 CFU on the NA/Amp plate.</p>
+<p>From <a href="#fig-handbook-table" class="quarto-xref">Figure&nbsp;<span>2.2</span></a> we can see that the <span class="math inline">\(10^{-1}\)</span> dilution gives a count of 37 CFU on the NA/Amp plate.</p>
 <p>What is the CFU/mL of the sample supernatant when grown on the NA/Amp plate?</p>
 </div>
 </div>
@@ -517,8 +482,8 @@ Caution
 </div>
 </div>
 </section>
-<section id="practice-question" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="practice-question"><span class="header-section-number">1.2</span> Practice Question</h2>
+<section id="practice-question" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="practice-question"><span class="header-section-number">2.2</span> Practice Question</h2>
 <p>If you would like more practice calculating CFU/mL from this kind of data, you can use the question below.</p>
 <p>The <code>Reveal answers</code> button to show the answer if you’re stuck, and the <code>Try another question</code> button will deliver a new question with randomly-chosen values.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -943,13 +908,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./scenario.html" class="pagination-link" aria-label="The Scenario">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">The Scenario</span>
+      <a href="./experiment.html" class="pagination-link" aria-label="The Experiment">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">The Experiment</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./data.html" class="pagination-link" aria-label="Simulated Data">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Simulated Data</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Simulated Data</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
