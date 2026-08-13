@@ -66,13 +66,6 @@ format:
     code-link: true
     author-meta: "Leighton Pritchard"
     #css: custom-styles.css
-  epub:
-    cover-image: cover.png
-  docx:
-    cover-image: cover.png
-    toc-depth: 1
-    link-citations: true
-    link-bibliography: true
 
 # Freeze output before pushing modifications to the repository when publishing
 # Should not need changing
