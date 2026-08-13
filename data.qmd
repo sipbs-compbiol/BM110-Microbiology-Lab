@@ -9,9 +9,9 @@ prefer-html: true
 We simulated a possible realisation of the CFU/mL-counting portion of the experiment for the BM110 microbiology laboratory, with 25 samples from each of the two farms A and B. The calculated CFU/mL are shown in @tbl-dataset, and can be inspected in the file [`farm_scenario_1.tsv`](assets/data/farm_scenario_1.tsv).
 
 ::: { .callout-note }
-This data should look similar to the collated data from all of the groups in the laboratory.
+The data in @tbl-dataset should look similar to the collated data from all of the groups in the laboratory.
 
-The values will be difference, but you should have columns with sample number, farm identifier, and CFU/mL for both the NA and NA/Amp plates for each sample.
+The values will be different, but you should have columns with sample number, farm identifier, and CFU/mL for both the NA and NA/Amp plates for each sample.
 :::
 
 ```{r}
