@@ -40,12 +40,13 @@ book:
     - part: scenario.qmd
       chapters: 
         - cfus.qmd
+        - experiment.qmd
         - data.qmd
         - statistics.qmd
         - links.qmd
     
     - part: example_pages.qmd
-      chapters: 
+      chapters:
         - callouts.qmd
         - movies.qmd
         - embedpdf.qmd
