@@ -2,7 +2,7 @@
 
 Welcome to the {{< var ay >}} edition of the statistics supporting information for the BM110 microbiology laboratory.
 
-We would be very grateful to hear feedback about this workshop material [by email]({{< var admin.email >}}) or through the [GitHub repository Issues page]({{< var github.issues >}}).
+We would be very grateful to hear feedback about this material [by email]({{< var admin.email >}}) or through the [GitHub repository Issues page]({{< var github.issues >}}).
 
 ## Overview
 
