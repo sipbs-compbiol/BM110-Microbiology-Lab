@@ -9,6 +9,7 @@ Depends:
     R (>= 4.5.0)
 Imports:
     tidyverse (>= 2.0.0),
+    emmeans,
     ggplot2,
     ggridges,
     flextable,
